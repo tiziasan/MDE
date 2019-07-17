@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated mDE1819 -->
+      <package
+            uri="http://www.example.org/mDE1819"
+            class="mde18-19.mDE1819.MDE1819Package"
+            genModel="model/mDE1819.genmodel"/>
+   </extension>
+
+</plugin>

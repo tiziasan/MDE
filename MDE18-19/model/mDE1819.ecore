@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mDE1819" nsURI="http://www.example.org/mDE1819" nsPrefix="mDE1819">
+  <eClassifiers xsi:type="ecore:EClass" name="Event">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contest" eType="#//Contest"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//Events"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Action">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//Actions"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Contest">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="shape" eType="#//Shape"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arrow" eType="#//Arrow"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//Action"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Shape">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//Shapes"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Area" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Perimeter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Position" eType="#//Coordinate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Arrow">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Lenght" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Thikness" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Oriented" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Source" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Target" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Position" eType="#//Coordinate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Project">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="#//Event"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//Action"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contest" eType="#//Contest"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Coordinate" instanceTypeName="Coordinate">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Events">
+    <eLiterals name="Single_click"/>
+    <eLiterals name="Double_click" value="1"/>
+    <eLiterals name="Right_click" value="2"/>
+    <eLiterals name="Click_and_Drag_side" value="3"/>
+    <eLiterals name="Click_and_Drag_corner" value="4"/>
+    <eLiterals name="Click_and_Drag_shape" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Actions">
+    <eLiterals name="Select"/>
+    <eLiterals name="Contestual_menù" value="2" literal="Contestual_menù"/>
+    <eLiterals name="Incraese_side_dimenction" value="3"/>
+    <eLiterals name="Increase_two_sides_dimentions" value="4"/>
+    <eLiterals name="Move_the_element" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Shapes">
+    <eLiterals name="Square"/>
+    <eLiterals name="Rectangle" value="1"/>
+    <eLiterals name="Triangle" value="2"/>
+    <eLiterals name="Circle" value="3"/>
+  </eClassifiers>
+</ecore:EPackage>
