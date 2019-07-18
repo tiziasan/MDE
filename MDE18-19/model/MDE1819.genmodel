@@ -39,9 +39,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MDE1819.ecore#//Action/Type"/>
     </genClasses>
     <genClasses ecoreClass="MDE1819.ecore#//Contest">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MDE1819.ecore#//Contest/shape"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MDE1819.ecore#//Contest/arrow"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MDE1819.ecore#//Contest/action"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MDE1819.ecore#//Contest/property"/>
     </genClasses>
     <genClasses ecoreClass="MDE1819.ecore#//Shape">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MDE1819.ecore#//Shape/Type"/>
@@ -65,6 +64,9 @@
     <genClasses ecoreClass="MDE1819.ecore#//Coordinate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MDE1819.ecore#//Coordinate/x"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MDE1819.ecore#//Coordinate/y"/>
+    </genClasses>
+    <genClasses ecoreClass="MDE1819.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MDE1819.ecore#//Property/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -9,17 +9,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//Actions"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Contest">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="shape" eType="#//Shape"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="arrow" eType="#//Arrow"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//Action"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="property" upperBound="-1"
+        eType="#//Property" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Shape">
+  <eClassifiers xsi:type="ecore:EClass" name="Shape" eSuperTypes="#//Contest">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//Shapes"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Area" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Perimeter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Position" eType="#//Coordinate"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Arrow">
+  <eClassifiers xsi:type="ecore:EClass" name="Arrow" eSuperTypes="#//Contest">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Lenght" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Thikness" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Oriented" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -30,7 +30,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Project">
     <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="#//Event"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//Action"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contest" eType="#//Contest"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contest" eType="#//Contest"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Coordinate" instanceTypeName="Coordinate">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
@@ -56,5 +57,8 @@
     <eLiterals name="Rectangle" value="1"/>
     <eLiterals name="Triangle" value="2"/>
     <eLiterals name="Circle" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Property">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>
