@@ -5,13 +5,27 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:mDE="http://www.example.org/mDE"
     xsi:schemaLocation="http://www.example.org/mDE mDE.ecore">
-  <Actions Name="Enlarge"
+  <Actions Name="Enlarge Square"
       Type="Enlarge Shape"
       Context="//@Contexts.0"/>
+  <Actions Name="Insert Text Arrow"
+      Type="Insert Text"
+      Context="//@Contexts.1"/>
+  <Actions Name="Move Circle"
+      Type="Move"
+      Context="//@Contexts.5"/>
   <Events Name="Drag Side Square"
       Type="Drag"
       EventPosition="//@Contexts.0/@InteractionPositions.0"
       Context="//@Contexts.0"/>
+  <Events Name="Double Click Arrow"
+      Type="Double Click"
+      EventPosition="//@Contexts.1/@InteractionPositions.0"
+      Context="//@Contexts.1"/>
+  <Events Name="Move Circle"
+      Type="Move"
+      EventPosition="//@Contexts.5/@InteractionPositions.0"
+      Context="//@Contexts.5"/>
   <Contexts
       Name="Square">
     <Properties
@@ -25,13 +39,16 @@
         DataType="Double"/>
     <InteractionPositions
         Element="Side"
-        Position="Left"/>
+        Position="Left"
+        Name="Side Left"/>
     <InteractionPositions
         Element="Side"
-        Position="Right"/>
+        Position="Right"
+        Name="Side Right"/>
     <InteractionPositions
         Element="Angle"
-        Position="Top Left"/>
+        Position="Top Left"
+        Name="Angle Top Left"/>
   </Contexts>
   <Contexts
       Name="Arrow">
@@ -46,9 +63,14 @@
         DataType="Double"/>
     <InteractionPositions
         Element="Head"
-        Position=""/>
+        Position=""
+        Name="Head"/>
     <InteractionPositions
-        Element="Tail"/>
+        Element="Tail"
+        Name="Tail"/>
+    <InteractionPositions
+        Element="Shape"
+        Name="Shape"/>
   </Contexts>
   <Contexts
       Name="Line Intersection"
@@ -70,5 +92,17 @@
     <Properties
         Name="Lenght"
         DataType="Integer"/>
+  </Contexts>
+  <Contexts
+      Name="Circle">
+    <Properties
+        Name="Radius"
+        DataType="Double"/>
+    <Properties
+        Name="Circumference"
+        DataType="Double"/>
+    <InteractionPositions
+        Element="Shape"
+        Name="Shape Circle"/>
   </Contexts>
 </mDE:Project>
