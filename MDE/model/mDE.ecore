@@ -34,6 +34,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="InteractionPositions" upperBound="-1"
         eType="#//InteractionPosition" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Shape" eSuperTypes="#//Context"/>
   <eClassifiers xsi:type="ecore:EClass" name="Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="DataType" lowerBound="1"
