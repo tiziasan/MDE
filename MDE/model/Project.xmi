@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mDE:Project
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mDE="http://www.example.org/mDE"
+    xsi:schemaLocation="http://www.example.org/mDE mDE.ecore">
+  <Actions Name="Enlarge"
+      Type="Enlarge Shape"
+      Context="//@Contexts.0"/>
+  <Events Name="Drag Side"
+      Type="Drag"
+      EventPosition="//@Contexts.0/@InteractionPositions.0"
+      Context="//@Contexts.0"/>
+  <Contexts
+      Name="Square">
+    <Properties
+        Name="Area"
+        DataType="Double"/>
+    <Properties
+        Name="Height"
+        DataType="Double"/>
+    <Properties
+        Name="Length"
+        DataType="Double"/>
+    <InteractionPositions
+        Element="Side"
+        Position="Left"/>
+    <InteractionPositions
+        Element="Side"
+        Position="Right"/>
+    <InteractionPositions
+        Element="Angle"
+        Position="Top Left"/>
+  </Contexts>
+  <Contexts
+      Name="Arrow">
+    <Properties
+        Name="Lenght"
+        DataType="Double"/>
+    <Properties
+        Name="Source"
+        DataType="Double"/>
+    <Properties
+        Name="Target"
+        DataType="Double"/>
+    <InteractionPositions
+        Element="Head"
+        Position=""/>
+    <InteractionPositions
+        Element="Tail"/>
+  </Contexts>
+  <Contexts
+      Name="Line Intersection"
+      Composed="true"
+      NumberOfElements="2"
+      Components="//@Contexts.3 //@Contexts.4">
+    <Properties
+        Name="Angle"
+        DataType="Integer"/>
+  </Contexts>
+  <Contexts
+      Name="Line 1">
+    <Properties
+        Name="Lenght"
+        DataType="Integer"/>
+  </Contexts>
+  <Contexts
+      Name="Line 2">
+    <Properties
+        Name="Lenght"
+        DataType="Integer"/>
+  </Contexts>
+</mDE:Project>
