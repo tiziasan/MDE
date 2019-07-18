@@ -8,7 +8,7 @@
   <Actions Name="Enlarge"
       Type="Enlarge Shape"
       Context="//@Contexts.0"/>
-  <Events Name="Drag Side"
+  <Events Name="Drag Side Square"
       Type="Drag"
       EventPosition="//@Contexts.0/@InteractionPositions.0"
       Context="//@Contexts.0"/>
