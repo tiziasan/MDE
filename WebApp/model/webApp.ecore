@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="webApp" nsURI="http://www.example.org/webApp" nsPrefix="webApp">
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WebModel" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ModelElement" upperBound="-1"
+        eType="#//WebElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Entities" upperBound="-1"
+        eType="#//Entity" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WebElement" abstract="true" eSuperTypes="#//NamedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Page" eSuperTypes="#//WebElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComposedOf" eType="#//Form"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ShownBy" eType="#//Form"
+        eOpposite="#//Form/Data"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Form">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//FormType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Data" eType="#//Entity"
+        eOpposite="#//Entity/ShownBy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FormType">
+    <eLiterals name="Multiple" literal="Multiple"/>
+    <eLiterals name="Single" value="1" literal="Single"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webApp:WebModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:webApp="http://www.example.org/webApp"
+    xsi:schemaLocation="http://www.example.org/webApp webApp.ecore"
+    Name="Application">
+  <ModelElement
+      xsi:type="webApp:Page"
+      Name="Homepage"
+      Content="General Information">
+    <ComposedOf
+        Data="//@Entities.2"/>
+  </ModelElement>
+  <ModelElement
+      xsi:type="webApp:Page"
+      Name="Contacts"
+      Content="Contacts Info">
+    <ComposedOf
+        Type="Single"
+        Data="//@Entities.0"/>
+  </ModelElement>
+  <Entities
+      Name="Contacts Info"
+      ShownBy="//@ModelElement.1/@ComposedOf"/>
+  <Entities
+      Name="Homepage Images"/>
+  <Entities
+      Name="General Info"
+      ShownBy="//@ModelElement.0/@ComposedOf"/>
+</webApp:WebModel>
