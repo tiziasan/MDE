@@ -4,7 +4,8 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:mDE="http://www.example.org/mDE"
-    xsi:schemaLocation="http://www.example.org/mDE mDE.ecore">
+    xsi:schemaLocation="http://www.example.org/mDE mDE.ecore"
+    Name="Visual Editor">
   <Actions Name="Enlarge Square"
       Type="Enlarge Shape"
       Context="//@Contexts.0"/>
@@ -38,17 +39,17 @@
         Name="Length"
         DataType="Double"/>
     <InteractionPositions
+        Name="Side Left"
         Element="Side"
-        Position="Left"
-        Name="Side Left"/>
+        Position="Left"/>
     <InteractionPositions
+        Name="Side Right"
         Element="Side"
-        Position="Right"
-        Name="Side Right"/>
+        Position="Right"/>
     <InteractionPositions
+        Name="Angle Top Left"
         Element="Angle"
-        Position="Top Left"
-        Name="Angle Top Left"/>
+        Position="Top Left"/>
   </Contexts>
   <Contexts
       Name="Arrow">
@@ -62,15 +63,15 @@
         Name="Target"
         DataType="Double"/>
     <InteractionPositions
+        Name="Head"
         Element="Head"
-        Position=""
-        Name="Head"/>
+        Position=""/>
     <InteractionPositions
-        Element="Tail"
-        Name="Tail"/>
+        Name="Tail"
+        Element="Tail"/>
     <InteractionPositions
-        Element="Shape"
-        Name="Shape"/>
+        Name="Shape"
+        Element="Shape"/>
   </Contexts>
   <Contexts
       Name="Line Intersection"
@@ -102,7 +103,8 @@
         Name="Circumference"
         DataType="Double"/>
     <InteractionPositions
-        Element="Shape"
-        Name="Shape Circle"/>
+        Name="Shape Circle"
+        Element="Shape"/>
   </Contexts>
+  <Contexts/>
 </mDE:Project>
