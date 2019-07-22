@@ -33,10 +33,10 @@
         Name="Area"
         DataType="Double"/>
     <Properties
-        Name="Height"
+        Name="HeightSquare"
         DataType="Double"/>
     <Properties
-        Name="Length"
+        Name="LengthSquare"
         DataType="Double"/>
     <InteractionPositions
         Name="Side Left"
@@ -104,4 +104,14 @@
         Element="Shape"/>
   </Contexts>
   <Contexts/>
+  <Formulas
+      Name="Area"
+      Operation="base*height">
+    <Variables
+        Name="Base"
+        Property="//@Contexts.0/@Properties.2"/>
+    <Variables
+        Name="Height"
+        Property="//@Contexts.0/@Properties.1"/>
+  </Formulas>
 </mDE:Project>
