@@ -5,28 +5,76 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:webApp="http://www.example.org/webApp"
     xsi:schemaLocation="http://www.example.org/webApp webApp.ecore"
-    Name="Application">
+    Name="Webapp">
   <ModelElement
       xsi:type="webApp:Page"
-      Name="Homepage"
-      Content="General Information">
+      Name="Homepage">
     <ComposedOf
-        Data="//@Entities.2"/>
+        Name="Header">
+      <Elements
+          Name="Menù"
+          Type="Paragraph"/>
+    </ComposedOf>
+    <ComposedOf
+        Name="Body">
+      <Elements
+          Name="Background"
+          Type="Image"/>
+      <Elements
+          Name="Text"
+          Type="Paragraph"/>
+    </ComposedOf>
+    <ComposedOf
+        Name="Footer"
+        Data="//@Entities.2">
+      <Elements
+          Name="Link"
+          Type="List"/>
+    </ComposedOf>
   </ModelElement>
   <ModelElement
       xsi:type="webApp:Page"
+      Name="Contacts">
+    <ComposedOf
+        Name="Contact"
+        Data="//@Entities.1">
+      <Elements
+          Name="Send"/>
+      <Elements
+          Name="Email"
+          Type="Input"/>
+      <Elements
+          Name="Text"
+          Type="Input"/>
+    </ComposedOf>
+  </ModelElement>
+  <ModelElement
+      xsi:type="webApp:Page"
+      Name="News">
+    <ComposedOf
+        Name="News"
+        Data="//@Entities.0">
+      <Elements
+          Name="News1"
+          Type="Paragraph"/>
+      <Elements
+          Name="News2"
+          Type="Paragraph"/>
+      <Elements
+          Name="News3"
+          Type="Paragraph"/>
+    </ComposedOf>
+  </ModelElement>
+  <Entities
+      Name="News"
+      ShownBy="//@ModelElement.2/@ComposedOf.0"
+      Table="News"/>
+  <Entities
       Name="Contacts"
-      Content="Contacts Info">
-    <ComposedOf
-        Type="Single"
-        Data="//@Entities.0"/>
-  </ModelElement>
+      ShownBy="//@ModelElement.1/@ComposedOf.0"
+      Table="Contacts"/>
   <Entities
-      Name="Contacts Info"
-      ShownBy="//@ModelElement.1/@ComposedOf"/>
-  <Entities
-      Name="Homepage Images"/>
-  <Entities
-      Name="General Info"
-      ShownBy="//@ModelElement.0/@ComposedOf"/>
+      Name="Info"
+      ShownBy="//@ModelElement.0/@ComposedOf.2"
+      Table="Info"/>
 </webApp:WebModel>

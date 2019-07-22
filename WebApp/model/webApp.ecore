@@ -10,23 +10,38 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Entities" upperBound="-1"
         eType="#//Entity" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WebElement" abstract="true" eSuperTypes="#//NamedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WebElement" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//ElementType"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Page" eSuperTypes="#//WebElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ComposedOf" eType="#//Form"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComposedOf" upperBound="-1"
+        eType="#//Form" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ShownBy" eType="#//Form"
-        eOpposite="#//Form/Data"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ShownBy" upperBound="-1"
+        eType="#//Form" eOpposite="#//Form/Data"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Table" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Form">
+  <eClassifiers xsi:type="ecore:EClass" name="Form" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//FormType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Data" eType="#//Entity"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Data" upperBound="-1" eType="#//Entity"
         eOpposite="#//Entity/ShownBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Elements" upperBound="-1"
+        eType="#//WebElement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="FormType">
     <eLiterals name="Multiple" literal="Multiple"/>
     <eLiterals name="Single" value="1" literal="Single"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ElementType">
+    <eLiterals name="Botton" literal="Botton"/>
+    <eLiterals name="Checkbox" value="1"/>
+    <eLiterals name="Input" value="2"/>
+    <eLiterals name="Div" value="3"/>
+    <eLiterals name="Paragraph" value="4"/>
+    <eLiterals name="List" value="5"/>
+    <eLiterals name="Select" value="6"/>
+    <eLiterals name="Image" value="7"/>
   </eClassifiers>
 </ecore:EPackage>
