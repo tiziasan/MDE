@@ -79,20 +79,17 @@
       NumberOfElements="2"
       Components="//@Contexts.3 //@Contexts.4">
     <Properties
-        Name="Angle"
-        DataType="Integer"/>
+        Name="Angle"/>
   </Contexts>
   <Contexts
       Name="Line 1">
     <Properties
-        Name="Lenght"
-        DataType="Integer"/>
+        Name="Lenght"/>
   </Contexts>
   <Contexts
       Name="Line 2">
     <Properties
-        Name="Lenght"
-        DataType="Integer"/>
+        Name="Lenght"/>
   </Contexts>
   <Contexts
       Name="Circle">

@@ -8,6 +8,8 @@
         eType="#//Event" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Contexts" upperBound="-1"
         eType="#//Context" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Formulas" ordered="false"
+        upperBound="-1" eType="#//Formula"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
@@ -35,7 +37,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Property" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="DataType" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+        eType="#//PropertyTypes"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="IsCalculated" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Value" eType="#//PropertyTypes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Formula" upperBound="-1"
+        eType="#//Formula"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InteractionPosition" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Element" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
@@ -44,4 +50,16 @@
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PropertyTypes">
+    <eLiterals name="Integer" literal="Integer"/>
+    <eLiterals name="Boolean" value="1"/>
+    <eLiterals name="Double" value="2"/>
+    <eLiterals name="String" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Formula" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Operation" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Variables" upperBound="-1"
+        eType="#//Variable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//NamedElement"/>
 </ecore:EPackage>
