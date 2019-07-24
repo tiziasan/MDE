@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="Transformation">
-    <property name="ECLIPSE_HOME" value="../../../../../../../../Applications/Eclipse/Eclipse Modeling Tools.app/Contents/Eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../.."/>
+    <property name="ECLIPSE_HOME" value="../../../../../../Applications/Eclipse/Eclipse Modeling Tools.app/Contents/Eclipse"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../Desktop/U/Model Driven Engineering/MDE Workspace"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="Transformation.libraryclasspath">

@@ -4,7 +4,36 @@
 
 [template public generateElement(anEPackage : EPackage)]
 [comment @main/]
-[file (anEPackage.name, false, 'UTF-8')]
+
+[for (it : EClass | anEPackage.eClassifiers)]
+
+[if (it.abstract = false)]
+		
+[file (it.name, false, 'UTF-8')]
+
+[if (it.eAllStructuralFeatures.upperBound = 1)]
+
+[for (feature : EStructuralFeature | it.eAllStructuralFeatures)]
+
+- [feature.name/] - [feature.eType.name/]
+ 
+Context.allInstances()->select(z|z.properties->exists(x|x.dataType = mde::PropertyTypes::[feature.eType.name.substring(2)/]))
+
+[/for]
+
+[else]
+
+[for (feature : EStructuralFeature | it.eAllStructuralFeatures)]
+Context.allInstances()->select(z|z.properties->exists(x|x.dataType = mde::PropertyTypes::[feature.eType.name.substring(2)/]))
+
+[/for]
+
+[/if]
 
 [/file]
+
+[/if]
+
+[/for]
+
 [/template]
