@@ -55,6 +55,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mDE.ecore#//Formula/operation"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mDE.ecore#//Formula/variables"/>
     </genClasses>
+    <genClasses ecoreClass="mDE.ecore#//Variable"/>
     <genClasses ecoreClass="mDE.ecore#//Editor"/>
   </genPackages>
 </genmodel:GenModel>
