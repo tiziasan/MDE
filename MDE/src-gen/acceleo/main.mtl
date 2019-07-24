@@ -1,7 +1,7 @@
 [comment encoding = UTF-8 /]
-[module main('')/]
+[module main('http://www.univaq.it/mde')/]
 
-[template public main(element : OclAny)]
+[template public main(element : EditorSelector)]
 	
 	[comment @main /]
 	[file (element.name.concat('.java'), false, 'UTF-8')]
