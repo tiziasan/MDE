@@ -21,11 +21,14 @@
 			</arguments>
 		</buildCommand>
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<buildCommand>
 			<name>org.eclipse.acceleo.ide.ui.acceleoBuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
+=======
+>>>>>>> parent of 07a23d4... Acceleo
 =======
 >>>>>>> parent of 07a23d4... Acceleo
 	</buildSpec>
@@ -35,4 +38,3 @@
 		<nature>org.eclipse.pde.PluginNature</nature>
 	</natures>
 </projectDescription>
-
