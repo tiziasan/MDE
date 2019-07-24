@@ -15,9 +15,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/*import org.eclipse.acceleo.engine.event.IAcceleoTextGenerationListener;
+import org.eclipse.acceleo.engine.event.IAcceleoTextGenerationListener;
 import org.eclipse.acceleo.engine.generation.strategy.IAcceleoGenerationStrategy;
-import org.eclipse.acceleo.engine.service.AbstractAcceleoGenerator;*/
+import org.eclipse.acceleo.engine.service.AbstractAcceleoGenerator;
 import org.eclipse.acceleo.engine.event.IAcceleoTextGenerationListener;
 import org.eclipse.acceleo.engine.generation.strategy.IAcceleoGenerationStrategy;
 import org.eclipse.acceleo.engine.service.AbstractAcceleoGenerator;
