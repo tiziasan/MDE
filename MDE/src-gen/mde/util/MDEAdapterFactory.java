@@ -16,17 +16,17 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see mde.MDEPackage
+ * @see mde.MdePackage
  * @generated
  */
-public class MDEAdapterFactory extends AdapterFactoryImpl {
+public class MdeAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static MDEPackage modelPackage;
+	protected static MdePackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -34,9 +34,9 @@ public class MDEAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MDEAdapterFactory() {
+	public MdeAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = MDEPackage.eINSTANCE;
+			modelPackage = MdePackage.eINSTANCE;
 		}
 	}
 
@@ -65,7 +65,7 @@ public class MDEAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MDESwitch<Adapter> modelSwitch = new MDESwitch<Adapter>() {
+	protected MdeSwitch<Adapter> modelSwitch = new MdeSwitch<Adapter>() {
 		@Override
 		public Adapter caseEditorSelector(EditorSelector object) {
 			return createEditorSelectorAdapter();
@@ -268,4 +268,4 @@ public class MDEAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //MDEAdapterFactory
+} //MdeAdapterFactory

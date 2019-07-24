@@ -3,7 +3,7 @@
 package mde.impl;
 
 import mde.Editor;
-import mde.MDEPackage;
+import mde.MdePackage;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -31,7 +31,7 @@ public class EditorImpl extends NamedElementImpl implements Editor {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MDEPackage.Literals.EDITOR;
+		return MdePackage.Literals.EDITOR;
 	}
 
 } //EditorImpl

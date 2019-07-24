@@ -16,7 +16,7 @@ package mde;
  *   <li>{@link mde.Action#getEvent <em>Event</em>}</li>
  * </ul>
  *
- * @see mde.MDEPackage#getAction()
+ * @see mde.MdePackage#getAction()
  * @model
  * @generated
  */
@@ -27,7 +27,7 @@ public interface Action extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
-	 * @see mde.MDEPackage#getAction_Type()
+	 * @see mde.MdePackage#getAction_Type()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */
@@ -49,7 +49,7 @@ public interface Action extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Context</em>' reference.
 	 * @see #setContext(Context)
-	 * @see mde.MDEPackage#getAction_Context()
+	 * @see mde.MdePackage#getAction_Context()
 	 * @model
 	 * @generated
 	 */
@@ -71,7 +71,7 @@ public interface Action extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Event</em>' reference.
 	 * @see #setEvent(Event)
-	 * @see mde.MDEPackage#getAction_Event()
+	 * @see mde.MdePackage#getAction_Event()
 	 * @model
 	 * @generated
 	 */

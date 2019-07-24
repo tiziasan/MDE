@@ -5,7 +5,7 @@ package mde.impl;
 import java.util.Collection;
 
 import mde.Formula;
-import mde.MDEPackage;
+import mde.MdePackage;
 import mde.Property;
 import mde.PropertyTypes;
 
@@ -101,7 +101,7 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MDEPackage.Literals.PROPERTY;
+		return MdePackage.Literals.PROPERTY;
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 		PropertyTypes oldDataType = dataType;
 		dataType = newDataType == null ? DATA_TYPE_EDEFAULT : newDataType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MDEPackage.PROPERTY__DATA_TYPE, oldDataType,
+			eNotify(new ENotificationImpl(this, Notification.SET, MdePackage.PROPERTY__DATA_TYPE, oldDataType,
 					dataType));
 	}
 
@@ -148,7 +148,7 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 		boolean oldIsCalculated = isCalculated;
 		isCalculated = newIsCalculated;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MDEPackage.PROPERTY__IS_CALCULATED, oldIsCalculated,
+			eNotify(new ENotificationImpl(this, Notification.SET, MdePackage.PROPERTY__IS_CALCULATED, oldIsCalculated,
 					isCalculated));
 	}
 
@@ -160,7 +160,7 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 	@Override
 	public EList<Formula> getFormula() {
 		if (formula == null) {
-			formula = new EObjectResolvingEList<Formula>(Formula.class, this, MDEPackage.PROPERTY__FORMULA);
+			formula = new EObjectResolvingEList<Formula>(Formula.class, this, MdePackage.PROPERTY__FORMULA);
 		}
 		return formula;
 	}
@@ -173,11 +173,11 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MDEPackage.PROPERTY__DATA_TYPE:
+		case MdePackage.PROPERTY__DATA_TYPE:
 			return getDataType();
-		case MDEPackage.PROPERTY__IS_CALCULATED:
+		case MdePackage.PROPERTY__IS_CALCULATED:
 			return isIsCalculated();
-		case MDEPackage.PROPERTY__FORMULA:
+		case MdePackage.PROPERTY__FORMULA:
 			return getFormula();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -192,13 +192,13 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MDEPackage.PROPERTY__DATA_TYPE:
+		case MdePackage.PROPERTY__DATA_TYPE:
 			setDataType((PropertyTypes) newValue);
 			return;
-		case MDEPackage.PROPERTY__IS_CALCULATED:
+		case MdePackage.PROPERTY__IS_CALCULATED:
 			setIsCalculated((Boolean) newValue);
 			return;
-		case MDEPackage.PROPERTY__FORMULA:
+		case MdePackage.PROPERTY__FORMULA:
 			getFormula().clear();
 			getFormula().addAll((Collection<? extends Formula>) newValue);
 			return;
@@ -214,13 +214,13 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MDEPackage.PROPERTY__DATA_TYPE:
+		case MdePackage.PROPERTY__DATA_TYPE:
 			setDataType(DATA_TYPE_EDEFAULT);
 			return;
-		case MDEPackage.PROPERTY__IS_CALCULATED:
+		case MdePackage.PROPERTY__IS_CALCULATED:
 			setIsCalculated(IS_CALCULATED_EDEFAULT);
 			return;
-		case MDEPackage.PROPERTY__FORMULA:
+		case MdePackage.PROPERTY__FORMULA:
 			getFormula().clear();
 			return;
 		}
@@ -235,11 +235,11 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MDEPackage.PROPERTY__DATA_TYPE:
+		case MdePackage.PROPERTY__DATA_TYPE:
 			return dataType != DATA_TYPE_EDEFAULT;
-		case MDEPackage.PROPERTY__IS_CALCULATED:
+		case MdePackage.PROPERTY__IS_CALCULATED:
 			return isCalculated != IS_CALCULATED_EDEFAULT;
-		case MDEPackage.PROPERTY__FORMULA:
+		case MdePackage.PROPERTY__FORMULA:
 			return formula != null && !formula.isEmpty();
 		}
 		return super.eIsSet(featureID);

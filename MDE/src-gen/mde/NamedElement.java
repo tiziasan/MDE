@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link mde.NamedElement#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see mde.MDEPackage#getNamedElement()
+ * @see mde.MdePackage#getNamedElement()
  * @model abstract="true"
  * @generated
  */
@@ -27,7 +27,7 @@ public interface NamedElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see mde.MDEPackage#getNamedElement_Name()
+	 * @see mde.MdePackage#getNamedElement_Name()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */

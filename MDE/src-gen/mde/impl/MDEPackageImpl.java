@@ -9,8 +9,8 @@ import mde.EditorSelector;
 import mde.Event;
 import mde.Formula;
 import mde.InteractionPosition;
-import mde.MDEFactory;
-import mde.MDEPackage;
+import mde.MdeFactory;
+import mde.MdePackage;
 import mde.NamedElement;
 import mde.Property;
 import mde.PropertyTypes;
@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MDEPackageImpl extends EPackageImpl implements MDEPackage {
+public class MdePackageImpl extends EPackageImpl implements MdePackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -113,12 +113,12 @@ public class MDEPackageImpl extends EPackageImpl implements MDEPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see mde.MDEPackage#eNS_URI
+	 * @see mde.MdePackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private MDEPackageImpl() {
-		super(eNS_URI, MDEFactory.eINSTANCE);
+	private MdePackageImpl() {
+		super(eNS_URI, MdeFactory.eINSTANCE);
 	}
 
 	/**
@@ -131,7 +131,7 @@ public class MDEPackageImpl extends EPackageImpl implements MDEPackage {
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 *
-	 * <p>This method is used to initialize {@link MDEPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link MdePackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -140,15 +140,15 @@ public class MDEPackageImpl extends EPackageImpl implements MDEPackage {
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static MDEPackage init() {
+	public static MdePackage init() {
 		if (isInited)
-			return (MDEPackage) EPackage.Registry.INSTANCE.getEPackage(MDEPackage.eNS_URI);
+			return (MdePackage) EPackage.Registry.INSTANCE.getEPackage(MdePackage.eNS_URI);
 
 		// Obtain or create and register package
-		Object registeredMDEPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-		MDEPackageImpl theMDEPackage = registeredMDEPackage instanceof MDEPackageImpl
-				? (MDEPackageImpl) registeredMDEPackage
-				: new MDEPackageImpl();
+		Object registeredMdePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		MdePackageImpl theMdePackage = registeredMdePackage instanceof MdePackageImpl
+				? (MdePackageImpl) registeredMdePackage
+				: new MdePackageImpl();
 
 		isInited = true;
 
@@ -156,17 +156,17 @@ public class MDEPackageImpl extends EPackageImpl implements MDEPackage {
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theMDEPackage.createPackageContents();
+		theMdePackage.createPackageContents();
 
 		// Initialize created meta-data
-		theMDEPackage.initializePackageContents();
+		theMdePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theMDEPackage.freeze();
+		theMdePackage.freeze();
 
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(MDEPackage.eNS_URI, theMDEPackage);
-		return theMDEPackage;
+		EPackage.Registry.INSTANCE.put(MdePackage.eNS_URI, theMdePackage);
+		return theMdePackage;
 	}
 
 	/**
@@ -525,8 +525,8 @@ public class MDEPackageImpl extends EPackageImpl implements MDEPackage {
 	 * @generated
 	 */
 	@Override
-	public MDEFactory getMDEFactory() {
-		return (MDEFactory) getEFactoryInstance();
+	public MdeFactory getMdeFactory() {
+		return (MdeFactory) getEFactoryInstance();
 	}
 
 	/**
@@ -741,4 +741,4 @@ public class MDEPackageImpl extends EPackageImpl implements MDEPackage {
 		createResource(eNS_URI);
 	}
 
-} //MDEPackageImpl
+} //MdePackageImpl

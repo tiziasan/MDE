@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link mde.EditorSelector#getEditors <em>Editors</em>}</li>
  * </ul>
  *
- * @see mde.MDEPackage#getEditorSelector()
+ * @see mde.MdePackage#getEditorSelector()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface EditorSelector extends NamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Actions</em>' containment reference list.
-	 * @see mde.MDEPackage#getEditorSelector_Actions()
+	 * @see mde.MdePackage#getEditorSelector_Actions()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -43,7 +43,7 @@ public interface EditorSelector extends NamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Events</em>' containment reference list.
-	 * @see mde.MDEPackage#getEditorSelector_Events()
+	 * @see mde.MdePackage#getEditorSelector_Events()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -55,7 +55,7 @@ public interface EditorSelector extends NamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contexts</em>' containment reference list.
-	 * @see mde.MDEPackage#getEditorSelector_Contexts()
+	 * @see mde.MdePackage#getEditorSelector_Contexts()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -67,7 +67,7 @@ public interface EditorSelector extends NamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Formulas</em>' containment reference list.
-	 * @see mde.MDEPackage#getEditorSelector_Formulas()
+	 * @see mde.MdePackage#getEditorSelector_Formulas()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
@@ -79,7 +79,7 @@ public interface EditorSelector extends NamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Editors</em>' containment reference list.
-	 * @see mde.MDEPackage#getEditorSelector_Editors()
+	 * @see mde.MdePackage#getEditorSelector_Editors()
 	 * @model containment="true"
 	 * @generated
 	 */

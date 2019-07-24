@@ -5,7 +5,7 @@ package mde.impl;
 import mde.Context;
 import mde.Event;
 import mde.InteractionPosition;
-import mde.MDEPackage;
+import mde.MdePackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -86,7 +86,7 @@ public class EventImpl extends NamedElementImpl implements Event {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MDEPackage.Literals.EVENT;
+		return MdePackage.Literals.EVENT;
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class EventImpl extends NamedElementImpl implements Event {
 		String oldType = type;
 		type = newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MDEPackage.EVENT__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdePackage.EVENT__TYPE, oldType, type));
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class EventImpl extends NamedElementImpl implements Event {
 			eventPosition = (InteractionPosition) eResolveProxy(oldEventPosition);
 			if (eventPosition != oldEventPosition) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MDEPackage.EVENT__EVENT_POSITION,
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MdePackage.EVENT__EVENT_POSITION,
 							oldEventPosition, eventPosition));
 			}
 		}
@@ -150,7 +150,7 @@ public class EventImpl extends NamedElementImpl implements Event {
 		InteractionPosition oldEventPosition = eventPosition;
 		eventPosition = newEventPosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MDEPackage.EVENT__EVENT_POSITION, oldEventPosition,
+			eNotify(new ENotificationImpl(this, Notification.SET, MdePackage.EVENT__EVENT_POSITION, oldEventPosition,
 					eventPosition));
 	}
 
@@ -166,7 +166,7 @@ public class EventImpl extends NamedElementImpl implements Event {
 			context = (Context) eResolveProxy(oldContext);
 			if (context != oldContext) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MDEPackage.EVENT__CONTEXT, oldContext,
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MdePackage.EVENT__CONTEXT, oldContext,
 							context));
 			}
 		}
@@ -192,7 +192,7 @@ public class EventImpl extends NamedElementImpl implements Event {
 		Context oldContext = context;
 		context = newContext;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MDEPackage.EVENT__CONTEXT, oldContext, context));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdePackage.EVENT__CONTEXT, oldContext, context));
 	}
 
 	/**
@@ -203,13 +203,13 @@ public class EventImpl extends NamedElementImpl implements Event {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MDEPackage.EVENT__TYPE:
+		case MdePackage.EVENT__TYPE:
 			return getType();
-		case MDEPackage.EVENT__EVENT_POSITION:
+		case MdePackage.EVENT__EVENT_POSITION:
 			if (resolve)
 				return getEventPosition();
 			return basicGetEventPosition();
-		case MDEPackage.EVENT__CONTEXT:
+		case MdePackage.EVENT__CONTEXT:
 			if (resolve)
 				return getContext();
 			return basicGetContext();
@@ -225,13 +225,13 @@ public class EventImpl extends NamedElementImpl implements Event {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MDEPackage.EVENT__TYPE:
+		case MdePackage.EVENT__TYPE:
 			setType((String) newValue);
 			return;
-		case MDEPackage.EVENT__EVENT_POSITION:
+		case MdePackage.EVENT__EVENT_POSITION:
 			setEventPosition((InteractionPosition) newValue);
 			return;
-		case MDEPackage.EVENT__CONTEXT:
+		case MdePackage.EVENT__CONTEXT:
 			setContext((Context) newValue);
 			return;
 		}
@@ -246,13 +246,13 @@ public class EventImpl extends NamedElementImpl implements Event {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MDEPackage.EVENT__TYPE:
+		case MdePackage.EVENT__TYPE:
 			setType(TYPE_EDEFAULT);
 			return;
-		case MDEPackage.EVENT__EVENT_POSITION:
+		case MdePackage.EVENT__EVENT_POSITION:
 			setEventPosition((InteractionPosition) null);
 			return;
-		case MDEPackage.EVENT__CONTEXT:
+		case MdePackage.EVENT__CONTEXT:
 			setContext((Context) null);
 			return;
 		}
@@ -267,11 +267,11 @@ public class EventImpl extends NamedElementImpl implements Event {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MDEPackage.EVENT__TYPE:
+		case MdePackage.EVENT__TYPE:
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-		case MDEPackage.EVENT__EVENT_POSITION:
+		case MdePackage.EVENT__EVENT_POSITION:
 			return eventPosition != null;
-		case MDEPackage.EVENT__CONTEXT:
+		case MdePackage.EVENT__CONTEXT:
 			return context != null;
 		}
 		return super.eIsSet(featureID);

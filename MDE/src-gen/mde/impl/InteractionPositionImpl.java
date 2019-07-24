@@ -3,7 +3,7 @@
 package mde.impl;
 
 import mde.InteractionPosition;
-import mde.MDEPackage;
+import mde.MdePackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -82,7 +82,7 @@ public class InteractionPositionImpl extends NamedElementImpl implements Interac
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MDEPackage.Literals.INTERACTION_POSITION;
+		return MdePackage.Literals.INTERACTION_POSITION;
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class InteractionPositionImpl extends NamedElementImpl implements Interac
 		String oldElement = element;
 		element = newElement;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MDEPackage.INTERACTION_POSITION__ELEMENT, oldElement,
+			eNotify(new ENotificationImpl(this, Notification.SET, MdePackage.INTERACTION_POSITION__ELEMENT, oldElement,
 					element));
 	}
 
@@ -129,7 +129,7 @@ public class InteractionPositionImpl extends NamedElementImpl implements Interac
 		String oldPosition = position;
 		position = newPosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MDEPackage.INTERACTION_POSITION__POSITION,
+			eNotify(new ENotificationImpl(this, Notification.SET, MdePackage.INTERACTION_POSITION__POSITION,
 					oldPosition, position));
 	}
 
@@ -141,9 +141,9 @@ public class InteractionPositionImpl extends NamedElementImpl implements Interac
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MDEPackage.INTERACTION_POSITION__ELEMENT:
+		case MdePackage.INTERACTION_POSITION__ELEMENT:
 			return getElement();
-		case MDEPackage.INTERACTION_POSITION__POSITION:
+		case MdePackage.INTERACTION_POSITION__POSITION:
 			return getPosition();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -157,10 +157,10 @@ public class InteractionPositionImpl extends NamedElementImpl implements Interac
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MDEPackage.INTERACTION_POSITION__ELEMENT:
+		case MdePackage.INTERACTION_POSITION__ELEMENT:
 			setElement((String) newValue);
 			return;
-		case MDEPackage.INTERACTION_POSITION__POSITION:
+		case MdePackage.INTERACTION_POSITION__POSITION:
 			setPosition((String) newValue);
 			return;
 		}
@@ -175,10 +175,10 @@ public class InteractionPositionImpl extends NamedElementImpl implements Interac
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MDEPackage.INTERACTION_POSITION__ELEMENT:
+		case MdePackage.INTERACTION_POSITION__ELEMENT:
 			setElement(ELEMENT_EDEFAULT);
 			return;
-		case MDEPackage.INTERACTION_POSITION__POSITION:
+		case MdePackage.INTERACTION_POSITION__POSITION:
 			setPosition(POSITION_EDEFAULT);
 			return;
 		}
@@ -193,9 +193,9 @@ public class InteractionPositionImpl extends NamedElementImpl implements Interac
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MDEPackage.INTERACTION_POSITION__ELEMENT:
+		case MdePackage.INTERACTION_POSITION__ELEMENT:
 			return ELEMENT_EDEFAULT == null ? element != null : !ELEMENT_EDEFAULT.equals(element);
-		case MDEPackage.INTERACTION_POSITION__POSITION:
+		case MdePackage.INTERACTION_POSITION__POSITION:
 			return POSITION_EDEFAULT == null ? position != null : !POSITION_EDEFAULT.equals(position);
 		}
 		return super.eIsSet(featureID);

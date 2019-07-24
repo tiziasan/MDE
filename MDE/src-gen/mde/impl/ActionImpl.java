@@ -5,7 +5,7 @@ package mde.impl;
 import mde.Action;
 import mde.Context;
 import mde.Event;
-import mde.MDEPackage;
+import mde.MdePackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -86,7 +86,7 @@ public class ActionImpl extends NamedElementImpl implements Action {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MDEPackage.Literals.ACTION;
+		return MdePackage.Literals.ACTION;
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class ActionImpl extends NamedElementImpl implements Action {
 		String oldType = type;
 		type = newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MDEPackage.ACTION__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdePackage.ACTION__TYPE, oldType, type));
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class ActionImpl extends NamedElementImpl implements Action {
 			context = (Context) eResolveProxy(oldContext);
 			if (context != oldContext) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MDEPackage.ACTION__CONTEXT, oldContext,
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MdePackage.ACTION__CONTEXT, oldContext,
 							context));
 			}
 		}
@@ -150,7 +150,7 @@ public class ActionImpl extends NamedElementImpl implements Action {
 		Context oldContext = context;
 		context = newContext;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MDEPackage.ACTION__CONTEXT, oldContext, context));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdePackage.ACTION__CONTEXT, oldContext, context));
 	}
 
 	/**
@@ -165,7 +165,7 @@ public class ActionImpl extends NamedElementImpl implements Action {
 			event = (Event) eResolveProxy(oldEvent);
 			if (event != oldEvent) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MDEPackage.ACTION__EVENT, oldEvent,
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MdePackage.ACTION__EVENT, oldEvent,
 							event));
 			}
 		}
@@ -191,7 +191,7 @@ public class ActionImpl extends NamedElementImpl implements Action {
 		Event oldEvent = event;
 		event = newEvent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MDEPackage.ACTION__EVENT, oldEvent, event));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdePackage.ACTION__EVENT, oldEvent, event));
 	}
 
 	/**
@@ -202,13 +202,13 @@ public class ActionImpl extends NamedElementImpl implements Action {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MDEPackage.ACTION__TYPE:
+		case MdePackage.ACTION__TYPE:
 			return getType();
-		case MDEPackage.ACTION__CONTEXT:
+		case MdePackage.ACTION__CONTEXT:
 			if (resolve)
 				return getContext();
 			return basicGetContext();
-		case MDEPackage.ACTION__EVENT:
+		case MdePackage.ACTION__EVENT:
 			if (resolve)
 				return getEvent();
 			return basicGetEvent();
@@ -224,13 +224,13 @@ public class ActionImpl extends NamedElementImpl implements Action {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MDEPackage.ACTION__TYPE:
+		case MdePackage.ACTION__TYPE:
 			setType((String) newValue);
 			return;
-		case MDEPackage.ACTION__CONTEXT:
+		case MdePackage.ACTION__CONTEXT:
 			setContext((Context) newValue);
 			return;
-		case MDEPackage.ACTION__EVENT:
+		case MdePackage.ACTION__EVENT:
 			setEvent((Event) newValue);
 			return;
 		}
@@ -245,13 +245,13 @@ public class ActionImpl extends NamedElementImpl implements Action {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MDEPackage.ACTION__TYPE:
+		case MdePackage.ACTION__TYPE:
 			setType(TYPE_EDEFAULT);
 			return;
-		case MDEPackage.ACTION__CONTEXT:
+		case MdePackage.ACTION__CONTEXT:
 			setContext((Context) null);
 			return;
-		case MDEPackage.ACTION__EVENT:
+		case MdePackage.ACTION__EVENT:
 			setEvent((Event) null);
 			return;
 		}
@@ -266,11 +266,11 @@ public class ActionImpl extends NamedElementImpl implements Action {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MDEPackage.ACTION__TYPE:
+		case MdePackage.ACTION__TYPE:
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-		case MDEPackage.ACTION__CONTEXT:
+		case MdePackage.ACTION__CONTEXT:
 			return context != null;
-		case MDEPackage.ACTION__EVENT:
+		case MdePackage.ACTION__EVENT:
 			return event != null;
 		}
 		return super.eIsSet(featureID);

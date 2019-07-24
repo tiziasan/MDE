@@ -19,17 +19,17 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see mde.MDEPackage
+ * @see mde.MdePackage
  * @generated
  */
-public class MDESwitch<T> extends Switch<T> {
+public class MdeSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static MDEPackage modelPackage;
+	protected static MdePackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -37,9 +37,9 @@ public class MDESwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MDESwitch() {
+	public MdeSwitch() {
 		if (modelPackage == null) {
-			modelPackage = MDEPackage.eINSTANCE;
+			modelPackage = MdePackage.eINSTANCE;
 		}
 	}
 
@@ -66,7 +66,7 @@ public class MDESwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case MDEPackage.EDITOR_SELECTOR: {
+		case MdePackage.EDITOR_SELECTOR: {
 			EditorSelector editorSelector = (EditorSelector) theEObject;
 			T result = caseEditorSelector(editorSelector);
 			if (result == null)
@@ -75,7 +75,7 @@ public class MDESwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case MDEPackage.EVENT: {
+		case MdePackage.EVENT: {
 			Event event = (Event) theEObject;
 			T result = caseEvent(event);
 			if (result == null)
@@ -84,7 +84,7 @@ public class MDESwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case MDEPackage.ACTION: {
+		case MdePackage.ACTION: {
 			Action action = (Action) theEObject;
 			T result = caseAction(action);
 			if (result == null)
@@ -93,7 +93,7 @@ public class MDESwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case MDEPackage.CONTEXT: {
+		case MdePackage.CONTEXT: {
 			Context context = (Context) theEObject;
 			T result = caseContext(context);
 			if (result == null)
@@ -102,7 +102,7 @@ public class MDESwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case MDEPackage.PROPERTY: {
+		case MdePackage.PROPERTY: {
 			Property property = (Property) theEObject;
 			T result = caseProperty(property);
 			if (result == null)
@@ -111,7 +111,7 @@ public class MDESwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case MDEPackage.INTERACTION_POSITION: {
+		case MdePackage.INTERACTION_POSITION: {
 			InteractionPosition interactionPosition = (InteractionPosition) theEObject;
 			T result = caseInteractionPosition(interactionPosition);
 			if (result == null)
@@ -120,14 +120,14 @@ public class MDESwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case MDEPackage.NAMED_ELEMENT: {
+		case MdePackage.NAMED_ELEMENT: {
 			NamedElement namedElement = (NamedElement) theEObject;
 			T result = caseNamedElement(namedElement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case MDEPackage.FORMULA: {
+		case MdePackage.FORMULA: {
 			Formula formula = (Formula) theEObject;
 			T result = caseFormula(formula);
 			if (result == null)
@@ -136,7 +136,7 @@ public class MDESwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case MDEPackage.EDITOR: {
+		case MdePackage.EDITOR: {
 			Editor editor = (Editor) theEObject;
 			T result = caseEditor(editor);
 			if (result == null)
@@ -301,4 +301,4 @@ public class MDESwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //MDESwitch
+} //MdeSwitch

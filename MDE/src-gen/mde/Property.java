@@ -18,7 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link mde.Property#getFormula <em>Formula</em>}</li>
  * </ul>
  *
- * @see mde.MDEPackage#getProperty()
+ * @see mde.MdePackage#getProperty()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface Property extends NamedElement {
 	 * @return the value of the '<em>Data Type</em>' attribute.
 	 * @see mde.PropertyTypes
 	 * @see #setDataType(PropertyTypes)
-	 * @see mde.MDEPackage#getProperty_DataType()
+	 * @see mde.MdePackage#getProperty_DataType()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -54,7 +54,7 @@ public interface Property extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Calculated</em>' attribute.
 	 * @see #setIsCalculated(boolean)
-	 * @see mde.MDEPackage#getProperty_IsCalculated()
+	 * @see mde.MdePackage#getProperty_IsCalculated()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 * @generated
 	 */
@@ -76,7 +76,7 @@ public interface Property extends NamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Formula</em>' reference list.
-	 * @see mde.MDEPackage#getProperty_Formula()
+	 * @see mde.MdePackage#getProperty_Formula()
 	 * @model
 	 * @generated
 	 */

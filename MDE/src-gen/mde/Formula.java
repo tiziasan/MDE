@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link mde.Formula#getVariables <em>Variables</em>}</li>
  * </ul>
  *
- * @see mde.MDEPackage#getFormula()
+ * @see mde.MdePackage#getFormula()
  * @model
  * @generated
  */
@@ -28,7 +28,7 @@ public interface Formula extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operation</em>' attribute.
 	 * @see #setOperation(String)
-	 * @see mde.MDEPackage#getFormula_Operation()
+	 * @see mde.MdePackage#getFormula_Operation()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */
@@ -50,7 +50,7 @@ public interface Formula extends NamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variables</em>' reference list.
-	 * @see mde.MDEPackage#getFormula_Variables()
+	 * @see mde.MdePackage#getFormula_Variables()
 	 * @model
 	 * @generated
 	 */

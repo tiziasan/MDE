@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link mde.Context#getEditors <em>Editors</em>}</li>
  * </ul>
  *
- * @see mde.MDEPackage#getContext()
+ * @see mde.MdePackage#getContext()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface Context extends NamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Properties</em>' containment reference list.
-	 * @see mde.MDEPackage#getContext_Properties()
+	 * @see mde.MdePackage#getContext_Properties()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
@@ -44,7 +44,7 @@ public interface Context extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Composed</em>' attribute.
 	 * @see #setComposed(boolean)
-	 * @see mde.MDEPackage#getContext_Composed()
+	 * @see mde.MdePackage#getContext_Composed()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.Boolean" required="true"
 	 * @generated
 	 */
@@ -67,7 +67,7 @@ public interface Context extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Elements</em>' attribute.
 	 * @see #setNumberOfElements(int)
-	 * @see mde.MDEPackage#getContext_NumberOfElements()
+	 * @see mde.MdePackage#getContext_NumberOfElements()
 	 * @model default="1" dataType="org.eclipse.emf.ecore.xml.type.Int"
 	 * @generated
 	 */
@@ -89,7 +89,7 @@ public interface Context extends NamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Components</em>' reference list.
-	 * @see mde.MDEPackage#getContext_Components()
+	 * @see mde.MdePackage#getContext_Components()
 	 * @model
 	 * @generated
 	 */
@@ -101,7 +101,7 @@ public interface Context extends NamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interaction Positions</em>' containment reference list.
-	 * @see mde.MDEPackage#getContext_InteractionPositions()
+	 * @see mde.MdePackage#getContext_InteractionPositions()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -113,7 +113,7 @@ public interface Context extends NamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Editors</em>' reference list.
-	 * @see mde.MDEPackage#getContext_Editors()
+	 * @see mde.MdePackage#getContext_Editors()
 	 * @model required="true"
 	 * @generated
 	 */

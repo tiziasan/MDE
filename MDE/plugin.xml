@@ -7,11 +7,11 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated mDE -->
+      <!-- @generated mde -->
       <package
             uri="http://www.univaq.it/mde"
-            class="mde.MDEPackage"
-            genModel="model/mDE.genmodel"/>
+            class="mde.MdePackage"
+            genModel="model/mde.genmodel"/>
    </extension>
 
 </plugin>

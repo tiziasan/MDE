@@ -5,7 +5,7 @@ package mde.impl;
 import java.util.Collection;
 
 import mde.Formula;
-import mde.MDEPackage;
+import mde.MdePackage;
 import mde.Property;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -79,7 +79,7 @@ public class FormulaImpl extends NamedElementImpl implements Formula {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MDEPackage.Literals.FORMULA;
+		return MdePackage.Literals.FORMULA;
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class FormulaImpl extends NamedElementImpl implements Formula {
 		String oldOperation = operation;
 		operation = newOperation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MDEPackage.FORMULA__OPERATION, oldOperation,
+			eNotify(new ENotificationImpl(this, Notification.SET, MdePackage.FORMULA__OPERATION, oldOperation,
 					operation));
 	}
 
@@ -114,7 +114,7 @@ public class FormulaImpl extends NamedElementImpl implements Formula {
 	@Override
 	public EList<Property> getVariables() {
 		if (variables == null) {
-			variables = new EObjectResolvingEList<Property>(Property.class, this, MDEPackage.FORMULA__VARIABLES);
+			variables = new EObjectResolvingEList<Property>(Property.class, this, MdePackage.FORMULA__VARIABLES);
 		}
 		return variables;
 	}
@@ -127,9 +127,9 @@ public class FormulaImpl extends NamedElementImpl implements Formula {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MDEPackage.FORMULA__OPERATION:
+		case MdePackage.FORMULA__OPERATION:
 			return getOperation();
-		case MDEPackage.FORMULA__VARIABLES:
+		case MdePackage.FORMULA__VARIABLES:
 			return getVariables();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -144,10 +144,10 @@ public class FormulaImpl extends NamedElementImpl implements Formula {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MDEPackage.FORMULA__OPERATION:
+		case MdePackage.FORMULA__OPERATION:
 			setOperation((String) newValue);
 			return;
-		case MDEPackage.FORMULA__VARIABLES:
+		case MdePackage.FORMULA__VARIABLES:
 			getVariables().clear();
 			getVariables().addAll((Collection<? extends Property>) newValue);
 			return;
@@ -163,10 +163,10 @@ public class FormulaImpl extends NamedElementImpl implements Formula {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MDEPackage.FORMULA__OPERATION:
+		case MdePackage.FORMULA__OPERATION:
 			setOperation(OPERATION_EDEFAULT);
 			return;
-		case MDEPackage.FORMULA__VARIABLES:
+		case MdePackage.FORMULA__VARIABLES:
 			getVariables().clear();
 			return;
 		}
@@ -181,9 +181,9 @@ public class FormulaImpl extends NamedElementImpl implements Formula {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MDEPackage.FORMULA__OPERATION:
+		case MdePackage.FORMULA__OPERATION:
 			return OPERATION_EDEFAULT == null ? operation != null : !OPERATION_EDEFAULT.equals(operation);
-		case MDEPackage.FORMULA__VARIABLES:
+		case MdePackage.FORMULA__VARIABLES:
 			return variables != null && !variables.isEmpty();
 		}
 		return super.eIsSet(featureID);

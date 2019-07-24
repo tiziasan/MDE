@@ -19,23 +19,23 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MDEFactoryImpl extends EFactoryImpl implements MDEFactory {
+public class MdeFactoryImpl extends EFactoryImpl implements MdeFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static MDEFactory init() {
+	public static MdeFactory init() {
 		try {
-			MDEFactory theMDEFactory = (MDEFactory) EPackage.Registry.INSTANCE.getEFactory(MDEPackage.eNS_URI);
-			if (theMDEFactory != null) {
-				return theMDEFactory;
+			MdeFactory theMdeFactory = (MdeFactory) EPackage.Registry.INSTANCE.getEFactory(MdePackage.eNS_URI);
+			if (theMdeFactory != null) {
+				return theMdeFactory;
 			}
 		} catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new MDEFactoryImpl();
+		return new MdeFactoryImpl();
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class MDEFactoryImpl extends EFactoryImpl implements MDEFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MDEFactoryImpl() {
+	public MdeFactoryImpl() {
 		super();
 	}
 
@@ -56,21 +56,21 @@ public class MDEFactoryImpl extends EFactoryImpl implements MDEFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case MDEPackage.EDITOR_SELECTOR:
+		case MdePackage.EDITOR_SELECTOR:
 			return createEditorSelector();
-		case MDEPackage.EVENT:
+		case MdePackage.EVENT:
 			return createEvent();
-		case MDEPackage.ACTION:
+		case MdePackage.ACTION:
 			return createAction();
-		case MDEPackage.CONTEXT:
+		case MdePackage.CONTEXT:
 			return createContext();
-		case MDEPackage.PROPERTY:
+		case MdePackage.PROPERTY:
 			return createProperty();
-		case MDEPackage.INTERACTION_POSITION:
+		case MdePackage.INTERACTION_POSITION:
 			return createInteractionPosition();
-		case MDEPackage.FORMULA:
+		case MdePackage.FORMULA:
 			return createFormula();
-		case MDEPackage.EDITOR:
+		case MdePackage.EDITOR:
 			return createEditor();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -85,7 +85,7 @@ public class MDEFactoryImpl extends EFactoryImpl implements MDEFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-		case MDEPackage.PROPERTY_TYPES:
+		case MdePackage.PROPERTY_TYPES:
 			return createPropertyTypesFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -100,7 +100,7 @@ public class MDEFactoryImpl extends EFactoryImpl implements MDEFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-		case MDEPackage.PROPERTY_TYPES:
+		case MdePackage.PROPERTY_TYPES:
 			return convertPropertyTypesToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -223,8 +223,8 @@ public class MDEFactoryImpl extends EFactoryImpl implements MDEFactory {
 	 * @generated
 	 */
 	@Override
-	public MDEPackage getMDEPackage() {
-		return (MDEPackage) getEPackage();
+	public MdePackage getMdePackage() {
+		return (MdePackage) getEPackage();
 	}
 
 	/**
@@ -234,8 +234,8 @@ public class MDEFactoryImpl extends EFactoryImpl implements MDEFactory {
 	 * @generated
 	 */
 	@Deprecated
-	public static MDEPackage getPackage() {
-		return MDEPackage.eINSTANCE;
+	public static MdePackage getPackage() {
+		return MdePackage.eINSTANCE;
 	}
 
-} //MDEFactoryImpl
+} //MdeFactoryImpl

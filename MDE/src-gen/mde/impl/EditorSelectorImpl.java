@@ -10,7 +10,7 @@ import mde.Editor;
 import mde.EditorSelector;
 import mde.Event;
 import mde.Formula;
-import mde.MDEPackage;
+import mde.MdePackage;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -106,7 +106,7 @@ public class EditorSelectorImpl extends NamedElementImpl implements EditorSelect
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MDEPackage.Literals.EDITOR_SELECTOR;
+		return MdePackage.Literals.EDITOR_SELECTOR;
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class EditorSelectorImpl extends NamedElementImpl implements EditorSelect
 	@Override
 	public EList<Action> getActions() {
 		if (actions == null) {
-			actions = new EObjectContainmentEList<Action>(Action.class, this, MDEPackage.EDITOR_SELECTOR__ACTIONS);
+			actions = new EObjectContainmentEList<Action>(Action.class, this, MdePackage.EDITOR_SELECTOR__ACTIONS);
 		}
 		return actions;
 	}
@@ -130,7 +130,7 @@ public class EditorSelectorImpl extends NamedElementImpl implements EditorSelect
 	@Override
 	public EList<Event> getEvents() {
 		if (events == null) {
-			events = new EObjectContainmentEList<Event>(Event.class, this, MDEPackage.EDITOR_SELECTOR__EVENTS);
+			events = new EObjectContainmentEList<Event>(Event.class, this, MdePackage.EDITOR_SELECTOR__EVENTS);
 		}
 		return events;
 	}
@@ -143,7 +143,7 @@ public class EditorSelectorImpl extends NamedElementImpl implements EditorSelect
 	@Override
 	public EList<Context> getContexts() {
 		if (contexts == null) {
-			contexts = new EObjectContainmentEList<Context>(Context.class, this, MDEPackage.EDITOR_SELECTOR__CONTEXTS);
+			contexts = new EObjectContainmentEList<Context>(Context.class, this, MdePackage.EDITOR_SELECTOR__CONTEXTS);
 		}
 		return contexts;
 	}
@@ -156,7 +156,7 @@ public class EditorSelectorImpl extends NamedElementImpl implements EditorSelect
 	@Override
 	public EList<Formula> getFormulas() {
 		if (formulas == null) {
-			formulas = new EObjectContainmentEList<Formula>(Formula.class, this, MDEPackage.EDITOR_SELECTOR__FORMULAS);
+			formulas = new EObjectContainmentEList<Formula>(Formula.class, this, MdePackage.EDITOR_SELECTOR__FORMULAS);
 		}
 		return formulas;
 	}
@@ -169,7 +169,7 @@ public class EditorSelectorImpl extends NamedElementImpl implements EditorSelect
 	@Override
 	public EList<Editor> getEditors() {
 		if (editors == null) {
-			editors = new EObjectContainmentEList<Editor>(Editor.class, this, MDEPackage.EDITOR_SELECTOR__EDITORS);
+			editors = new EObjectContainmentEList<Editor>(Editor.class, this, MdePackage.EDITOR_SELECTOR__EDITORS);
 		}
 		return editors;
 	}
@@ -182,15 +182,15 @@ public class EditorSelectorImpl extends NamedElementImpl implements EditorSelect
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MDEPackage.EDITOR_SELECTOR__ACTIONS:
+		case MdePackage.EDITOR_SELECTOR__ACTIONS:
 			return ((InternalEList<?>) getActions()).basicRemove(otherEnd, msgs);
-		case MDEPackage.EDITOR_SELECTOR__EVENTS:
+		case MdePackage.EDITOR_SELECTOR__EVENTS:
 			return ((InternalEList<?>) getEvents()).basicRemove(otherEnd, msgs);
-		case MDEPackage.EDITOR_SELECTOR__CONTEXTS:
+		case MdePackage.EDITOR_SELECTOR__CONTEXTS:
 			return ((InternalEList<?>) getContexts()).basicRemove(otherEnd, msgs);
-		case MDEPackage.EDITOR_SELECTOR__FORMULAS:
+		case MdePackage.EDITOR_SELECTOR__FORMULAS:
 			return ((InternalEList<?>) getFormulas()).basicRemove(otherEnd, msgs);
-		case MDEPackage.EDITOR_SELECTOR__EDITORS:
+		case MdePackage.EDITOR_SELECTOR__EDITORS:
 			return ((InternalEList<?>) getEditors()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -204,15 +204,15 @@ public class EditorSelectorImpl extends NamedElementImpl implements EditorSelect
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MDEPackage.EDITOR_SELECTOR__ACTIONS:
+		case MdePackage.EDITOR_SELECTOR__ACTIONS:
 			return getActions();
-		case MDEPackage.EDITOR_SELECTOR__EVENTS:
+		case MdePackage.EDITOR_SELECTOR__EVENTS:
 			return getEvents();
-		case MDEPackage.EDITOR_SELECTOR__CONTEXTS:
+		case MdePackage.EDITOR_SELECTOR__CONTEXTS:
 			return getContexts();
-		case MDEPackage.EDITOR_SELECTOR__FORMULAS:
+		case MdePackage.EDITOR_SELECTOR__FORMULAS:
 			return getFormulas();
-		case MDEPackage.EDITOR_SELECTOR__EDITORS:
+		case MdePackage.EDITOR_SELECTOR__EDITORS:
 			return getEditors();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -227,23 +227,23 @@ public class EditorSelectorImpl extends NamedElementImpl implements EditorSelect
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MDEPackage.EDITOR_SELECTOR__ACTIONS:
+		case MdePackage.EDITOR_SELECTOR__ACTIONS:
 			getActions().clear();
 			getActions().addAll((Collection<? extends Action>) newValue);
 			return;
-		case MDEPackage.EDITOR_SELECTOR__EVENTS:
+		case MdePackage.EDITOR_SELECTOR__EVENTS:
 			getEvents().clear();
 			getEvents().addAll((Collection<? extends Event>) newValue);
 			return;
-		case MDEPackage.EDITOR_SELECTOR__CONTEXTS:
+		case MdePackage.EDITOR_SELECTOR__CONTEXTS:
 			getContexts().clear();
 			getContexts().addAll((Collection<? extends Context>) newValue);
 			return;
-		case MDEPackage.EDITOR_SELECTOR__FORMULAS:
+		case MdePackage.EDITOR_SELECTOR__FORMULAS:
 			getFormulas().clear();
 			getFormulas().addAll((Collection<? extends Formula>) newValue);
 			return;
-		case MDEPackage.EDITOR_SELECTOR__EDITORS:
+		case MdePackage.EDITOR_SELECTOR__EDITORS:
 			getEditors().clear();
 			getEditors().addAll((Collection<? extends Editor>) newValue);
 			return;
@@ -259,19 +259,19 @@ public class EditorSelectorImpl extends NamedElementImpl implements EditorSelect
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MDEPackage.EDITOR_SELECTOR__ACTIONS:
+		case MdePackage.EDITOR_SELECTOR__ACTIONS:
 			getActions().clear();
 			return;
-		case MDEPackage.EDITOR_SELECTOR__EVENTS:
+		case MdePackage.EDITOR_SELECTOR__EVENTS:
 			getEvents().clear();
 			return;
-		case MDEPackage.EDITOR_SELECTOR__CONTEXTS:
+		case MdePackage.EDITOR_SELECTOR__CONTEXTS:
 			getContexts().clear();
 			return;
-		case MDEPackage.EDITOR_SELECTOR__FORMULAS:
+		case MdePackage.EDITOR_SELECTOR__FORMULAS:
 			getFormulas().clear();
 			return;
-		case MDEPackage.EDITOR_SELECTOR__EDITORS:
+		case MdePackage.EDITOR_SELECTOR__EDITORS:
 			getEditors().clear();
 			return;
 		}
@@ -286,15 +286,15 @@ public class EditorSelectorImpl extends NamedElementImpl implements EditorSelect
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MDEPackage.EDITOR_SELECTOR__ACTIONS:
+		case MdePackage.EDITOR_SELECTOR__ACTIONS:
 			return actions != null && !actions.isEmpty();
-		case MDEPackage.EDITOR_SELECTOR__EVENTS:
+		case MdePackage.EDITOR_SELECTOR__EVENTS:
 			return events != null && !events.isEmpty();
-		case MDEPackage.EDITOR_SELECTOR__CONTEXTS:
+		case MdePackage.EDITOR_SELECTOR__CONTEXTS:
 			return contexts != null && !contexts.isEmpty();
-		case MDEPackage.EDITOR_SELECTOR__FORMULAS:
+		case MdePackage.EDITOR_SELECTOR__FORMULAS:
 			return formulas != null && !formulas.isEmpty();
-		case MDEPackage.EDITOR_SELECTOR__EDITORS:
+		case MdePackage.EDITOR_SELECTOR__EDITORS:
 			return editors != null && !editors.isEmpty();
 		}
 		return super.eIsSet(featureID);

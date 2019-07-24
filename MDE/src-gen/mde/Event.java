@@ -16,7 +16,7 @@ package mde;
  *   <li>{@link mde.Event#getContext <em>Context</em>}</li>
  * </ul>
  *
- * @see mde.MDEPackage#getEvent()
+ * @see mde.MdePackage#getEvent()
  * @model
  * @generated
  */
@@ -27,7 +27,7 @@ public interface Event extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
-	 * @see mde.MDEPackage#getEvent_Type()
+	 * @see mde.MdePackage#getEvent_Type()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 * @generated
 	 */
@@ -49,7 +49,7 @@ public interface Event extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Event Position</em>' reference.
 	 * @see #setEventPosition(InteractionPosition)
-	 * @see mde.MDEPackage#getEvent_EventPosition()
+	 * @see mde.MdePackage#getEvent_EventPosition()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -71,7 +71,7 @@ public interface Event extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Context</em>' reference.
 	 * @see #setContext(Context)
-	 * @see mde.MDEPackage#getEvent_Context()
+	 * @see mde.MdePackage#getEvent_Context()
 	 * @model required="true"
 	 * @generated
 	 */

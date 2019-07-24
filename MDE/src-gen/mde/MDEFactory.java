@@ -9,17 +9,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see mde.MDEPackage
+ * @see mde.MdePackage
  * @generated
  */
-public interface MDEFactory extends EFactory {
+public interface MdeFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	MDEFactory eINSTANCE = mde.impl.MDEFactoryImpl.init();
+	MdeFactory eINSTANCE = mde.impl.MdeFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Editor Selector</em>'.
@@ -100,6 +100,6 @@ public interface MDEFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	MDEPackage getMDEPackage();
+	MdePackage getMdePackage();
 
-} //MDEFactory
+} //MdeFactory

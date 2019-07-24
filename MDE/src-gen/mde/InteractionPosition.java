@@ -15,7 +15,7 @@ package mde;
  *   <li>{@link mde.InteractionPosition#getPosition <em>Position</em>}</li>
  * </ul>
  *
- * @see mde.MDEPackage#getInteractionPosition()
+ * @see mde.MdePackage#getInteractionPosition()
  * @model
  * @generated
  */
@@ -26,7 +26,7 @@ public interface InteractionPosition extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Element</em>' attribute.
 	 * @see #setElement(String)
-	 * @see mde.MDEPackage#getInteractionPosition_Element()
+	 * @see mde.MdePackage#getInteractionPosition_Element()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 * @generated
 	 */
@@ -48,7 +48,7 @@ public interface InteractionPosition extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position</em>' attribute.
 	 * @see #setPosition(String)
-	 * @see mde.MDEPackage#getInteractionPosition_Position()
+	 * @see mde.MdePackage#getInteractionPosition_Position()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 * @generated
 	 */

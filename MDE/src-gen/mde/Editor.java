@@ -8,7 +8,7 @@ package mde;
  * <!-- end-user-doc -->
  *
  *
- * @see mde.MDEPackage#getEditor()
+ * @see mde.MdePackage#getEditor()
  * @model
  * @generated
  */

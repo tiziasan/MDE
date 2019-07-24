@@ -2,7 +2,7 @@
  */
 package mde.impl;
 
-import mde.MDEPackage;
+import mde.MdePackage;
 import mde.NamedElement;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -62,7 +62,7 @@ public abstract class NamedElementImpl extends MinimalEObjectImpl.Container impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MDEPackage.Literals.NAMED_ELEMENT;
+		return MdePackage.Literals.NAMED_ELEMENT;
 	}
 
 	/**
@@ -85,7 +85,7 @@ public abstract class NamedElementImpl extends MinimalEObjectImpl.Container impl
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MDEPackage.NAMED_ELEMENT__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdePackage.NAMED_ELEMENT__NAME, oldName, name));
 	}
 
 	/**
@@ -96,7 +96,7 @@ public abstract class NamedElementImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MDEPackage.NAMED_ELEMENT__NAME:
+		case MdePackage.NAMED_ELEMENT__NAME:
 			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -110,7 +110,7 @@ public abstract class NamedElementImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MDEPackage.NAMED_ELEMENT__NAME:
+		case MdePackage.NAMED_ELEMENT__NAME:
 			setName((String) newValue);
 			return;
 		}
@@ -125,7 +125,7 @@ public abstract class NamedElementImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MDEPackage.NAMED_ELEMENT__NAME:
+		case MdePackage.NAMED_ELEMENT__NAME:
 			setName(NAME_EDEFAULT);
 			return;
 		}
@@ -140,7 +140,7 @@ public abstract class NamedElementImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MDEPackage.NAMED_ELEMENT__NAME:
+		case MdePackage.NAMED_ELEMENT__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);

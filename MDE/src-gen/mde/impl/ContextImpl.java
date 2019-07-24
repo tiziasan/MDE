@@ -7,7 +7,7 @@ import java.util.Collection;
 import mde.Context;
 import mde.Editor;
 import mde.InteractionPosition;
-import mde.MDEPackage;
+import mde.MdePackage;
 import mde.Property;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -139,7 +139,7 @@ public class ContextImpl extends NamedElementImpl implements Context {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MDEPackage.Literals.CONTEXT;
+		return MdePackage.Literals.CONTEXT;
 	}
 
 	/**
@@ -150,7 +150,7 @@ public class ContextImpl extends NamedElementImpl implements Context {
 	@Override
 	public EList<Property> getProperties() {
 		if (properties == null) {
-			properties = new EObjectContainmentEList<Property>(Property.class, this, MDEPackage.CONTEXT__PROPERTIES);
+			properties = new EObjectContainmentEList<Property>(Property.class, this, MdePackage.CONTEXT__PROPERTIES);
 		}
 		return properties;
 	}
@@ -175,7 +175,7 @@ public class ContextImpl extends NamedElementImpl implements Context {
 		boolean oldComposed = composed;
 		composed = newComposed;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MDEPackage.CONTEXT__COMPOSED, oldComposed, composed));
+			eNotify(new ENotificationImpl(this, Notification.SET, MdePackage.CONTEXT__COMPOSED, oldComposed, composed));
 	}
 
 	/**
@@ -198,7 +198,7 @@ public class ContextImpl extends NamedElementImpl implements Context {
 		int oldNumberOfElements = numberOfElements;
 		numberOfElements = newNumberOfElements;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MDEPackage.CONTEXT__NUMBER_OF_ELEMENTS,
+			eNotify(new ENotificationImpl(this, Notification.SET, MdePackage.CONTEXT__NUMBER_OF_ELEMENTS,
 					oldNumberOfElements, numberOfElements));
 	}
 
@@ -210,7 +210,7 @@ public class ContextImpl extends NamedElementImpl implements Context {
 	@Override
 	public EList<Context> getComponents() {
 		if (components == null) {
-			components = new EObjectResolvingEList<Context>(Context.class, this, MDEPackage.CONTEXT__COMPONENTS);
+			components = new EObjectResolvingEList<Context>(Context.class, this, MdePackage.CONTEXT__COMPONENTS);
 		}
 		return components;
 	}
@@ -224,7 +224,7 @@ public class ContextImpl extends NamedElementImpl implements Context {
 	public EList<InteractionPosition> getInteractionPositions() {
 		if (interactionPositions == null) {
 			interactionPositions = new EObjectContainmentEList<InteractionPosition>(InteractionPosition.class, this,
-					MDEPackage.CONTEXT__INTERACTION_POSITIONS);
+					MdePackage.CONTEXT__INTERACTION_POSITIONS);
 		}
 		return interactionPositions;
 	}
@@ -237,7 +237,7 @@ public class ContextImpl extends NamedElementImpl implements Context {
 	@Override
 	public EList<Editor> getEditors() {
 		if (editors == null) {
-			editors = new EObjectResolvingEList<Editor>(Editor.class, this, MDEPackage.CONTEXT__EDITORS);
+			editors = new EObjectResolvingEList<Editor>(Editor.class, this, MdePackage.CONTEXT__EDITORS);
 		}
 		return editors;
 	}
@@ -250,9 +250,9 @@ public class ContextImpl extends NamedElementImpl implements Context {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MDEPackage.CONTEXT__PROPERTIES:
+		case MdePackage.CONTEXT__PROPERTIES:
 			return ((InternalEList<?>) getProperties()).basicRemove(otherEnd, msgs);
-		case MDEPackage.CONTEXT__INTERACTION_POSITIONS:
+		case MdePackage.CONTEXT__INTERACTION_POSITIONS:
 			return ((InternalEList<?>) getInteractionPositions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -266,17 +266,17 @@ public class ContextImpl extends NamedElementImpl implements Context {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MDEPackage.CONTEXT__PROPERTIES:
+		case MdePackage.CONTEXT__PROPERTIES:
 			return getProperties();
-		case MDEPackage.CONTEXT__COMPOSED:
+		case MdePackage.CONTEXT__COMPOSED:
 			return isComposed();
-		case MDEPackage.CONTEXT__NUMBER_OF_ELEMENTS:
+		case MdePackage.CONTEXT__NUMBER_OF_ELEMENTS:
 			return getNumberOfElements();
-		case MDEPackage.CONTEXT__COMPONENTS:
+		case MdePackage.CONTEXT__COMPONENTS:
 			return getComponents();
-		case MDEPackage.CONTEXT__INTERACTION_POSITIONS:
+		case MdePackage.CONTEXT__INTERACTION_POSITIONS:
 			return getInteractionPositions();
-		case MDEPackage.CONTEXT__EDITORS:
+		case MdePackage.CONTEXT__EDITORS:
 			return getEditors();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -291,25 +291,25 @@ public class ContextImpl extends NamedElementImpl implements Context {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MDEPackage.CONTEXT__PROPERTIES:
+		case MdePackage.CONTEXT__PROPERTIES:
 			getProperties().clear();
 			getProperties().addAll((Collection<? extends Property>) newValue);
 			return;
-		case MDEPackage.CONTEXT__COMPOSED:
+		case MdePackage.CONTEXT__COMPOSED:
 			setComposed((Boolean) newValue);
 			return;
-		case MDEPackage.CONTEXT__NUMBER_OF_ELEMENTS:
+		case MdePackage.CONTEXT__NUMBER_OF_ELEMENTS:
 			setNumberOfElements((Integer) newValue);
 			return;
-		case MDEPackage.CONTEXT__COMPONENTS:
+		case MdePackage.CONTEXT__COMPONENTS:
 			getComponents().clear();
 			getComponents().addAll((Collection<? extends Context>) newValue);
 			return;
-		case MDEPackage.CONTEXT__INTERACTION_POSITIONS:
+		case MdePackage.CONTEXT__INTERACTION_POSITIONS:
 			getInteractionPositions().clear();
 			getInteractionPositions().addAll((Collection<? extends InteractionPosition>) newValue);
 			return;
-		case MDEPackage.CONTEXT__EDITORS:
+		case MdePackage.CONTEXT__EDITORS:
 			getEditors().clear();
 			getEditors().addAll((Collection<? extends Editor>) newValue);
 			return;
@@ -325,22 +325,22 @@ public class ContextImpl extends NamedElementImpl implements Context {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MDEPackage.CONTEXT__PROPERTIES:
+		case MdePackage.CONTEXT__PROPERTIES:
 			getProperties().clear();
 			return;
-		case MDEPackage.CONTEXT__COMPOSED:
+		case MdePackage.CONTEXT__COMPOSED:
 			setComposed(COMPOSED_EDEFAULT);
 			return;
-		case MDEPackage.CONTEXT__NUMBER_OF_ELEMENTS:
+		case MdePackage.CONTEXT__NUMBER_OF_ELEMENTS:
 			setNumberOfElements(NUMBER_OF_ELEMENTS_EDEFAULT);
 			return;
-		case MDEPackage.CONTEXT__COMPONENTS:
+		case MdePackage.CONTEXT__COMPONENTS:
 			getComponents().clear();
 			return;
-		case MDEPackage.CONTEXT__INTERACTION_POSITIONS:
+		case MdePackage.CONTEXT__INTERACTION_POSITIONS:
 			getInteractionPositions().clear();
 			return;
-		case MDEPackage.CONTEXT__EDITORS:
+		case MdePackage.CONTEXT__EDITORS:
 			getEditors().clear();
 			return;
 		}
@@ -355,17 +355,17 @@ public class ContextImpl extends NamedElementImpl implements Context {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MDEPackage.CONTEXT__PROPERTIES:
+		case MdePackage.CONTEXT__PROPERTIES:
 			return properties != null && !properties.isEmpty();
-		case MDEPackage.CONTEXT__COMPOSED:
+		case MdePackage.CONTEXT__COMPOSED:
 			return composed != COMPOSED_EDEFAULT;
-		case MDEPackage.CONTEXT__NUMBER_OF_ELEMENTS:
+		case MdePackage.CONTEXT__NUMBER_OF_ELEMENTS:
 			return numberOfElements != NUMBER_OF_ELEMENTS_EDEFAULT;
-		case MDEPackage.CONTEXT__COMPONENTS:
+		case MdePackage.CONTEXT__COMPONENTS:
 			return components != null && !components.isEmpty();
-		case MDEPackage.CONTEXT__INTERACTION_POSITIONS:
+		case MdePackage.CONTEXT__INTERACTION_POSITIONS:
 			return interactionPositions != null && !interactionPositions.isEmpty();
-		case MDEPackage.CONTEXT__EDITORS:
+		case MdePackage.CONTEXT__EDITORS:
 			return editors != null && !editors.isEmpty();
 		}
 		return super.eIsSet(featureID);

@@ -20,11 +20,11 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see mde.MDEFactory
+ * @see mde.MdeFactory
  * @model kind="package"
  * @generated
  */
-public interface MDEPackage extends EPackage {
+public interface MdePackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -55,14 +55,14 @@ public interface MDEPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	MDEPackage eINSTANCE = mde.impl.MDEPackageImpl.init();
+	MdePackage eINSTANCE = mde.impl.MdePackageImpl.init();
 
 	/**
 	 * The meta object id for the '{@link mde.impl.NamedElementImpl <em>Named Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see mde.impl.NamedElementImpl
-	 * @see mde.impl.MDEPackageImpl#getNamedElement()
+	 * @see mde.impl.MdePackageImpl#getNamedElement()
 	 * @generated
 	 */
 	int NAMED_ELEMENT = 6;
@@ -99,7 +99,7 @@ public interface MDEPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see mde.impl.EditorSelectorImpl
-	 * @see mde.impl.MDEPackageImpl#getEditorSelector()
+	 * @see mde.impl.MdePackageImpl#getEditorSelector()
 	 * @generated
 	 */
 	int EDITOR_SELECTOR = 0;
@@ -181,7 +181,7 @@ public interface MDEPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see mde.impl.EventImpl
-	 * @see mde.impl.MDEPackageImpl#getEvent()
+	 * @see mde.impl.MdePackageImpl#getEvent()
 	 * @generated
 	 */
 	int EVENT = 1;
@@ -245,7 +245,7 @@ public interface MDEPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see mde.impl.ActionImpl
-	 * @see mde.impl.MDEPackageImpl#getAction()
+	 * @see mde.impl.MdePackageImpl#getAction()
 	 * @generated
 	 */
 	int ACTION = 2;
@@ -309,7 +309,7 @@ public interface MDEPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see mde.impl.ContextImpl
-	 * @see mde.impl.MDEPackageImpl#getContext()
+	 * @see mde.impl.MdePackageImpl#getContext()
 	 * @generated
 	 */
 	int CONTEXT = 3;
@@ -400,7 +400,7 @@ public interface MDEPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see mde.impl.PropertyImpl
-	 * @see mde.impl.MDEPackageImpl#getProperty()
+	 * @see mde.impl.MdePackageImpl#getProperty()
 	 * @generated
 	 */
 	int PROPERTY = 4;
@@ -464,7 +464,7 @@ public interface MDEPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see mde.impl.InteractionPositionImpl
-	 * @see mde.impl.MDEPackageImpl#getInteractionPosition()
+	 * @see mde.impl.MdePackageImpl#getInteractionPosition()
 	 * @generated
 	 */
 	int INTERACTION_POSITION = 5;
@@ -519,7 +519,7 @@ public interface MDEPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see mde.impl.FormulaImpl
-	 * @see mde.impl.MDEPackageImpl#getFormula()
+	 * @see mde.impl.MdePackageImpl#getFormula()
 	 * @generated
 	 */
 	int FORMULA = 7;
@@ -574,7 +574,7 @@ public interface MDEPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see mde.impl.EditorImpl
-	 * @see mde.impl.MDEPackageImpl#getEditor()
+	 * @see mde.impl.MdePackageImpl#getEditor()
 	 * @generated
 	 */
 	int EDITOR = 8;
@@ -611,7 +611,7 @@ public interface MDEPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see mde.PropertyTypes
-	 * @see mde.impl.MDEPackageImpl#getPropertyTypes()
+	 * @see mde.impl.MdePackageImpl#getPropertyTypes()
 	 * @generated
 	 */
 	int PROPERTY_TYPES = 9;
@@ -998,7 +998,7 @@ public interface MDEPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	MDEFactory getMDEFactory();
+	MdeFactory getMdeFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1019,7 +1019,7 @@ public interface MDEPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see mde.impl.EditorSelectorImpl
-		 * @see mde.impl.MDEPackageImpl#getEditorSelector()
+		 * @see mde.impl.MdePackageImpl#getEditorSelector()
 		 * @generated
 		 */
 		EClass EDITOR_SELECTOR = eINSTANCE.getEditorSelector();
@@ -1069,7 +1069,7 @@ public interface MDEPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see mde.impl.EventImpl
-		 * @see mde.impl.MDEPackageImpl#getEvent()
+		 * @see mde.impl.MdePackageImpl#getEvent()
 		 * @generated
 		 */
 		EClass EVENT = eINSTANCE.getEvent();
@@ -1103,7 +1103,7 @@ public interface MDEPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see mde.impl.ActionImpl
-		 * @see mde.impl.MDEPackageImpl#getAction()
+		 * @see mde.impl.MdePackageImpl#getAction()
 		 * @generated
 		 */
 		EClass ACTION = eINSTANCE.getAction();
@@ -1137,7 +1137,7 @@ public interface MDEPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see mde.impl.ContextImpl
-		 * @see mde.impl.MDEPackageImpl#getContext()
+		 * @see mde.impl.MdePackageImpl#getContext()
 		 * @generated
 		 */
 		EClass CONTEXT = eINSTANCE.getContext();
@@ -1195,7 +1195,7 @@ public interface MDEPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see mde.impl.PropertyImpl
-		 * @see mde.impl.MDEPackageImpl#getProperty()
+		 * @see mde.impl.MdePackageImpl#getProperty()
 		 * @generated
 		 */
 		EClass PROPERTY = eINSTANCE.getProperty();
@@ -1229,7 +1229,7 @@ public interface MDEPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see mde.impl.InteractionPositionImpl
-		 * @see mde.impl.MDEPackageImpl#getInteractionPosition()
+		 * @see mde.impl.MdePackageImpl#getInteractionPosition()
 		 * @generated
 		 */
 		EClass INTERACTION_POSITION = eINSTANCE.getInteractionPosition();
@@ -1255,7 +1255,7 @@ public interface MDEPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see mde.impl.NamedElementImpl
-		 * @see mde.impl.MDEPackageImpl#getNamedElement()
+		 * @see mde.impl.MdePackageImpl#getNamedElement()
 		 * @generated
 		 */
 		EClass NAMED_ELEMENT = eINSTANCE.getNamedElement();
@@ -1273,7 +1273,7 @@ public interface MDEPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see mde.impl.FormulaImpl
-		 * @see mde.impl.MDEPackageImpl#getFormula()
+		 * @see mde.impl.MdePackageImpl#getFormula()
 		 * @generated
 		 */
 		EClass FORMULA = eINSTANCE.getFormula();
@@ -1299,7 +1299,7 @@ public interface MDEPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see mde.impl.EditorImpl
-		 * @see mde.impl.MDEPackageImpl#getEditor()
+		 * @see mde.impl.MdePackageImpl#getEditor()
 		 * @generated
 		 */
 		EClass EDITOR = eINSTANCE.getEditor();
@@ -1309,11 +1309,11 @@ public interface MDEPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see mde.PropertyTypes
-		 * @see mde.impl.MDEPackageImpl#getPropertyTypes()
+		 * @see mde.impl.MdePackageImpl#getPropertyTypes()
 		 * @generated
 		 */
 		EEnum PROPERTY_TYPES = eINSTANCE.getPropertyTypes();
 
 	}
 
-} //MDEPackage
+} //MdePackage
