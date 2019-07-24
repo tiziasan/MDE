@@ -25,10 +25,7 @@ import org.eclipse.emf.common.util.BasicMonitor;
 import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-
-import mde.MDEPackage;
 
 /**
  * Entry point of the 'Main' generation module.
@@ -125,8 +122,6 @@ public class Main extends AbstractAcceleoGenerator {
      * @generated
      */
     public static void main(String[] args) {
-    	EPackage.Registry.INSTANCE.put(MDEPackage.eNS_URI, MDEPackage.eINSTANCE); 
-
         try {
             if (args.length < 2) {
                 System.out.println("Arguments not valid : {model, folder}.");
