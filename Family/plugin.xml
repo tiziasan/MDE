@@ -7,11 +7,11 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated webapp1 -->
+      <!-- @generated family -->
       <package
-            uri="http://www.univaq.it/webapp1"
-            class="webapp1.Webapp1Package"
-            genModel="model/webapp1.genmodel"/>
+            uri="http://www.univaq.it/family"
+            class="family.FamilyPackage"
+            genModel="model/family.genmodel"/>
    </extension>
 
 </plugin>

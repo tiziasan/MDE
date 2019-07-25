@@ -1,5 +1,0 @@
-questo e un esempio
-		Members.allInstance( e | e.name = '')
-		NamedElement.allInstance( e | e.name = '')
-		Person.allInstance( e | e.name = '')
-		Family.allInstance( e | e.name = '')
