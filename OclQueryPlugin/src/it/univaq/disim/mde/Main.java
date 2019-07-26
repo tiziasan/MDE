@@ -1,14 +1,16 @@
 package it.univaq.disim.mde;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map.Entry;
+import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
@@ -19,13 +21,7 @@ import org.eclipse.emf.ecore.EParameter;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.xmi.impl.XMLResourceFactoryImpl;
-/*import org.eclipse.m2m.atl.core.ATLCoreException;
-import org.eclipse.m2m.atl.core.IReferenceModel;
-import org.eclipse.m2m.atl.core.ModelFactory;
-import org.eclipse.m2m.atl.core.emf.EMFModel;
-import org.eclipse.m2m.atl.core.emf.EMFModelFactory;
-import org.eclipse.m2m.atl.engine.parser.AtlParser;*/
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.ocl.OCL;
 import org.eclipse.ocl.ParserException;
 import org.eclipse.ocl.Query;
@@ -34,49 +30,122 @@ import org.eclipse.ocl.ecore.EcoreEnvironmentFactory;
 import org.eclipse.ocl.expressions.OCLExpression;
 import org.eclipse.ocl.helper.OCLHelper;
 
-/*import MM_uncertainty.Feature;
-import MM_uncertainty.MM_uncertaintyFactory;
-import MM_uncertainty.Metamodel;
-import VariabilityFM.VariabilityModel;
-import anatlyzer.atl.model.ATLModel;
-import anatlyzer.atl.util.ATLSerializer;
-import anatlyzer.atlext.ATL.ATLPackage;
-import anatlyzer.atlext.ATL.Binding;
-import anatlyzer.atlext.ATL.Callable;
-import anatlyzer.atlext.ATL.SimpleOutPatternElement;
-import anatlyzer.atlext.OCL.Attribute;
-import anatlyzer.atlext.OCL.OclExpression;
-import anatlyzer.atlext.OCL.OclFeature;
-import anatlyzer.atlext.OCL.OclType;
-import anatlyzer.atlext.OCL.Operation;*/
-
-import family.*;
-import webapp1.*;
 import mde.*;
-import mde.impl.MdeFactoryImpl;
-import mde.impl.MdePackageImpl;
-import mde.util.MdeAdapterFactory;
 
 public class Main {
 
-	public static void main(String[] args) {
-		MdePackage mdePackage = MdePackageImpl.init();
+	static String queryFileFolder = "Query" + File.separator;
+	static String modelFilePathString = "Model" + File.separator + "EditorSelector.xmi";
+	static String outputFileFolderString = "/Users/fabio/git/MDE/OclQueryPlugin/Output" + File.separator;
 
-		try {
-			System.out.println(getSimpleOutPattern(mdePackage));
-			
-			System.out.println("Fine");
-			
-		} catch (ParserException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.println("Errore");
+	public static void main(String[] args) throws Exception {
+
+		List<String> queryFileList = new ArrayList<String>();
+		List<String> queryList = new ArrayList<String>();
+		List<Context> contextList = new ArrayList<Context>();
+
+
+		Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
+	    Map<String, Object> m = reg.getExtensionToFactoryMap();
+	    m.put("xmi", new XMIResourceFactoryImpl());
+//
+//	    EditorSelector editorSelector = load("Model/EditorSelector.xmi");
+//	    
+//	    
+//	    try {
+//		
+//	    	getSimpleOutPattern(editorSelector).forEach(z -> System.out.println(z.getName()));
+//		
+//	    } catch (ParserException e) {
+//			e.printStackTrace();
+//		} 
+		
+		
+		// get files in folder
+		queryFileList = getQueryFiles(queryFileFolder);
+
+		// for each file in folder
+		for (String queryFile : queryFileList) {
+
+			// read the queries inside the file
+			queryList = getQueries(queryFile);
+
+			// for each query
+			for (String oclQuery : queryList) {
+
+				// call the method for executing the query and get the result
+				contextList = getSimpleOutPattern(oclQuery);
+
+				// create an output file
+				createOutput(queryFile, contextList);
+
+			}
 		}
+ 
+	}
+
+	private static List<String> getQueries(String queryFile) throws IOException {
+		List<String> queryList = new ArrayList<String>();
+
+		// read file line by line
+		BufferedReader br = new BufferedReader(new FileReader(queryFileFolder + queryFile));
+
+		String line;
+		while ((line = br.readLine()) != null) {
+			// if the line starts with "Query: " the line contains a query
+			if (line.startsWith("Query: ")) {
+
+				// second dimension queries
+				queryList.add(line.replaceAll("Query: ", ""));
+
+				// System.out.println(line);
+
+			}
+
+		}
+
+		return queryList;
+	}
+
+	private static List<String> getQueryFiles(String folderString) {
+
+		// get files in folder
+		File folder = new File(folderString);
+		File[] listOfFiles = folder.listFiles();
+
+		List<String> filesList = new ArrayList<String>();
+
+		// for each file in folder
+		for (int i = 0; i < listOfFiles.length; i++) {
+
+			// if is a file
+			if (listOfFiles[i].isFile()) {
+
+				filesList.add(listOfFiles[i].getName());
+
+			}
+		}
+
+		return filesList;
 
 	}
 
-	public static List<Context> getSimpleOutPattern(MdePackage mdePackage) throws ParserException {
-		System.out.println("EXTRACTING CALLABLE ELEMENTS FROM A ATL MODEL");
+	public static EditorSelector load(String fileName) {
+		EPackage.Registry.INSTANCE.put(MdePackage.eNS_URI, MdePackage.eINSTANCE);
+		ResourceSet resSet = new ResourceSetImpl();
+		Resource resource = resSet.getResource(URI.createURI(fileName), true);
+		// Get the first model element and cast it to the right type, in my
+		// example everything is hierarchical included in this first node
+		EditorSelector myWeb = (EditorSelector) resource.getContents().get(0);
+
+		return myWeb;
+	}
+
+	public static List<Context> getSimpleOutPattern(String oclQuery) throws ParserException {
+
+		EditorSelector editorSelector = load(modelFilePathString);
+
+		// System.out.println("EXTRACTING CALLABLE ELEMENTS FROM A ATL MODEL");
 		// DEFINE OCL AND HELPER
 		OCL<?, EClassifier, ?, ?, ?, EParameter, ?, ?, ?, Constraint, EClass, EObject> ocl;
 		OCLHelper<EClassifier, ?, ?, Constraint> helper;
@@ -86,32 +155,80 @@ public class Main {
 		// INSTANCIATE NEW HELPER FROM OCLEXPRESSION
 		helper = ocl.createOCLHelper();
 		// SET HELPER CONTEXT
-		helper.setContext(MdePackage.eINSTANCE.getContext()); // ???
+		helper.setContext(MdePackage.eINSTANCE.getContext());
 
 		// CREATE OCLEXPRESSION
-		OCLExpression<EClassifier> expression = helper.createQuery("Context.allInstances()");
+		OCLExpression<EClassifier> expression = helper.createQuery(oclQuery);
 		// CREATE QUERY FROM OCLEXPRESSION
 		Query<EClassifier, EClass, EObject> query = ocl.createQuery(expression);
 
 		// EVALUATE OCL
-		HashSet<Object> success = (HashSet<Object>) query.evaluate(mdePackage.getContext());
+		HashSet<Object> success = (HashSet<Object>) query.evaluate(editorSelector);
 		List<Context> callableMethods = new ArrayList<Context>();
 		for (Object object : success)
 			callableMethods.add((Context) object);
-		System.out.println("EXTRACTED CALLABLE ELEMENTS FROM A ATL MODEL");
+		// System.out.println("EXTRACTED CALLABLE ELEMENTS FROM A ATL MODEL");
 		return callableMethods;
 
 	}
 
-	/*
-	 * public static void printCallable(HashMap<OclFeature, OclType>
-	 * callableElements) { Iterator<Entry<OclFeature, OclType>> iterator =
-	 * callableElements.entrySet().iterator(); while (iterator.hasNext()) {
-	 * Entry<OclFeature, OclType> a = iterator.next(); if (a.getKey() instanceof
-	 * Attribute) { Attribute ch = ((Attribute) a.getKey());
-	 * System.out.println("att " + ch); } if (a.getKey() instanceof Operation) {
-	 * Operation sh = ((Operation) a.getKey()); System.out.println("ope " + sh); } }
-	 * }
-	 */
+//	public static void getOCLQueries(String folderPath) throws Exception {
+//
+//		// get files in folder
+//		File folder = new File(folderPath);
+//		File[] listOfFiles = folder.listFiles();
+//		String fileName;
+//
+//		List<String> filesList = new ArrayList<String>();
+//		List<List<String>> queryList = new ArrayList<List<String>>();
+//
+//		// for each file in folder
+//		for (int i = 0; i < listOfFiles.length; i++) {
+//
+//			// if is a file
+//			if (listOfFiles[i].isFile()) {
+//
+//				fileName = listOfFiles[i].getName();
+//
+//				// System.out.println(listOfFiles[i].getName());
+//				// read file line by line
+//				BufferedReader br = new BufferedReader(new FileReader(listOfFiles[i]));
+//				String line;
+//				while ((line = br.readLine()) != null) {
+//					// if the line starts with "Query: " the line contains a query
+//					if (line.startsWith("Query: ")) {
+//
+//						// second dimension queries
+//						queryList.add(index, element);
+//
+//						// System.out.println(line);
+//
+//					}
+//
+//				}
+//
+//				// filesList.add(listOfFiles[i].getName());
+//
+//			}
+//
+//		}
+//
+//	}
+
+	public static void createOutput(String metaclassName, List<Context> contexts) throws IOException {
+		
+		BufferedWriter writer = new BufferedWriter(new FileWriter(outputFileFolderString+metaclassName, true));
+		
+		for (Context context : contexts) {
+			
+			writer.write(context.getName());
+			
+			writer.newLine();
+			
+		}
+
+		writer.close();
+
+	}
 
 }

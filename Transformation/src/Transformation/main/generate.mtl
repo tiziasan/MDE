@@ -2,10 +2,9 @@
 [module generate('http://www.eclipse.org/emf/2002/Ecore')]
 
 
-[template public generateElement(anEPackage : EPackage)]
+[template public generateElement(it : EClass)]
 [comment @main/]
 
-[for (it : EClass | anEPackage.eClassifiers)]
 
 [if (it.abstract = false)]
 		
@@ -13,11 +12,14 @@
 
 [if (it.eAllStructuralFeatures.upperBound = 1)]
 
-[for (feature : EStructuralFeature | it.eAllStructuralFeatures)]
+[for (feature : EAttribute | it.eAllAttributes)]
+[if (feature.oclIsTypeOf(EAttribute))]
+	block_expression
+[/if]
 
 - [feature.name/] - [feature.eType.name/]
  
-Context.allInstances()->select(z|z.properties->exists(x|x.dataType = mde::PropertyTypes::[feature.eType.name.substring(2)/]))
+Context.allInstances()->select(z|z.properties->exists(x,y|x.dataType = mde::PropertyTypes::[feature.eType.name.substring(2)/]))
 
 [/for]
 
@@ -34,6 +36,5 @@ Context.allInstances()->select(z|z.properties->exists(x|x.dataType = mde::Proper
 
 [/if]
 
-[/for]
 
 [/template]

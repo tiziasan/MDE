@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mde:EditorSelector
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mde="http://www.univaq.it/mde"
+    xsi:schemaLocation="http://www.univaq.it/mde mde.ecore"
+    name="Editor Selector">
+  <contexts
+      name="Square"
+      editors="//@editors.0 //@editors.1 //@editors.2 //@editors.3 //@editors.4">
+    <properties
+        name="Side"
+        dataType="Double"/>
+    <properties
+        name="Area"
+        dataType="Double"
+        isCalculated="true"
+        formula="//@formulas.0"/>
+  </contexts>
+  <contexts
+      name="Circle"
+      editors="//@editors.0 //@editors.1 //@editors.3">
+    <properties
+        name="Radius"
+        dataType="Double"/>
+    <properties
+        name="Area"
+        dataType="Double"
+        isCalculated="true"
+        formula="//@formulas.1"/>
+  </contexts>
+  <contexts
+      name="Line"
+      editors="//@editors.0 //@editors.1 //@editors.3">
+    <properties
+        name="Length"
+        dataType="Double"/>
+    <properties
+        name="Lean"/>
+    <properties
+        name="IsOriented"
+        dataType="Boolean"/>
+  </contexts>
+  <contexts
+      name="Intersection"
+      composed="true"
+      numberOfElements="2"
+      components="//@contexts.5 //@contexts.6"
+      editors="//@editors.0 //@editors.1 //@editors.3">
+    <properties
+        name="Angle1"
+        isCalculated="true"
+        formula="//@formulas.2"/>
+    <properties
+        name="Delta Intersection Left"
+        dataType="Double"
+        isCalculated="true"/>
+    <properties
+        name="Delta Intersection Right"
+        dataType="Double"
+        isCalculated="true"/>
+    <properties
+        name="Intersection Point"/>
+    <properties
+        name="Angle2"
+        isCalculated="true"
+        formula="//@formulas.3"/>
+  </contexts>
+  <contexts
+      name="Box and Line"
+      composed="true"
+      numberOfElements="3"
+      components="//@contexts.7 //@contexts.8 //@contexts.9"
+      editors="//@editors.4 //@editors.0 //@editors.1 //@editors.2 //@editors.3">
+    <properties
+        name="Target"
+        dataType="String"/>
+    <properties
+        name="Source"
+        dataType="String"/>
+  </contexts>
+  <contexts
+      name="Line "
+      editors="//@editors.0 //@editors.1 //@editors.3">
+    <properties
+        name="Lenght"
+        dataType="Double"/>
+    <properties
+        name="Lean"/>
+    <properties
+        name="IsOriented"
+        dataType="Boolean"/>
+  </contexts>
+  <contexts
+      name="Line"
+      editors="//@editors.0 //@editors.1 //@editors.3">
+    <properties
+        name="Length"
+        dataType="Double"/>
+    <properties
+        name="Lean"/>
+    <properties
+        name="IsOriented"
+        dataType="Boolean"/>
+  </contexts>
+  <contexts
+      name="Line"
+      editors="//@editors.0 //@editors.1 //@editors.3">
+    <properties
+        name="Length"
+        dataType="Double"/>
+    <properties
+        name="Lean"/>
+    <properties
+        name="IsOriented"
+        dataType="Boolean"/>
+  </contexts>
+  <contexts
+      name="Rectangle"
+      editors="//@editors.0 //@editors.1 //@editors.2 //@editors.3 //@editors.4">
+    <properties
+        name="Base"
+        dataType="Double"/>
+    <properties
+        name="Area"
+        dataType="Double"
+        isCalculated="true"/>
+    <properties
+        name="Height"
+        dataType="Double"/>
+  </contexts>
+  <contexts
+      name="Rectangle"
+      editors="//@editors.0 //@editors.1 //@editors.2 //@editors.3 //@editors.4">
+    <properties
+        name="Base"
+        dataType="Double"/>
+    <properties
+        name="Area"
+        dataType="Double"
+        isCalculated="true"/>
+    <properties
+        name="Height"
+        dataType="Double"/>
+  </contexts>
+  <formulas
+      name=" Square Area"
+      operation="Side * Side"
+      variables="//@contexts.0/@properties.0"/>
+  <formulas
+      name="Circle Area"
+      operation="Radius * Radius * pi"
+      variables="//@contexts.1/@properties.0"/>
+  <formulas
+      name="Angle Intersection 1"
+      operation="Angle1 - Angle2"
+      variables="//@contexts.5/@properties.1 //@contexts.6/@properties.1"/>
+  <formulas
+      name="Angle Intersection 2"
+      operation="Angle2 - Angle1"
+      variables="//@contexts.5/@properties.1 //@contexts.6/@properties.1"/>
+  <formulas
+      name="Delta Intersection 1"
+      operation="Lenght - Intersection Point"
+      variables="//@contexts.3/@properties.3 //@contexts.5/@properties.0"/>
+  <formulas
+      name="Delta Intersection 2"
+      operation="Length - Intersection Point"
+      variables="//@contexts.3/@properties.3 //@contexts.5/@properties.0"/>
+  <editors name="PowerPoint"/>
+  <editors name="Visio"/>
+  <editors name="MagicDraw"/>
+  <editors name="SmartDraw"/>
+  <editors name="Sirius"/>
+</mde:EditorSelector>
