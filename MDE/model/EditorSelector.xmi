@@ -479,6 +479,9 @@
     <properties
         name="Description"
         dataType="String"/>
+    <properties
+        name="isColored"
+        dataType="Boolean"/>
     <interactionPositions
         name="Square Angle Top Right"
         element="Angle"
@@ -533,6 +536,9 @@
     <properties
         name="Description"
         dataType="String"/>
+    <properties
+        name="isColored"
+        dataType="Boolean"/>
     <interactionPositions
         name="Circle Angle Top Right"
         element="Angle"
@@ -745,6 +751,9 @@
     <properties
         name="Description"
         dataType="String"/>
+    <properties
+        name="isColored"
+        dataType="Boolean"/>
     <interactionPositions
         name="Rectangle Angle Top Right"
         element="Angle"
@@ -800,6 +809,9 @@
     <properties
         name="Description"
         dataType="String"/>
+    <properties
+        name="isColored"
+        dataType="Boolean"/>
     <interactionPositions
         name="Rectangle Angle Top Right"
         element="Angle"
@@ -855,6 +867,9 @@
     <properties
         name="Description"
         dataType="String"/>
+    <properties
+        name="isColored"
+        dataType="Boolean"/>
     <interactionPositions
         name="Triangle Angle Top Right"
         element="Angle"
