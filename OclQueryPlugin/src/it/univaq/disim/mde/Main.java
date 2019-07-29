@@ -3,7 +3,6 @@ package it.univaq.disim.mde;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -136,9 +135,9 @@ public class Main {
 		Resource resource = resSet.getResource(URI.createURI(fileName), true);
 		// Get the first model element and cast it to the right type, in my
 		// example everything is hierarchical included in this first node
-		EditorSelector myWeb = (EditorSelector) resource.getContents().get(0);
+		EditorSelector editorSelector = (EditorSelector) resource.getContents().get(0);
 
-		return myWeb;
+		return editorSelector;
 	}
 
 	public static List<Context> getSimpleOutPattern(String oclQuery) throws ParserException {

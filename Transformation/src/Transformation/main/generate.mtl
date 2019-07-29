@@ -5,7 +5,6 @@
 [template public generateElement(it : EClass)]
 [comment @main/]
 
-
 [if (it.abstract = false)]
 		
 [file (it.name, false, 'UTF-8')]
