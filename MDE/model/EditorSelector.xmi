@@ -473,6 +473,9 @@
         dataType="Double"
         isCalculated="true"
         formula="//@formulas.0"/>
+    <properties
+        name="Label"
+        dataType="String"/>
     <interactionPositions
         name="Square Angle Top Right"
         element="Angle"
@@ -521,6 +524,9 @@
         dataType="Double"
         isCalculated="true"
         formula="//@formulas.1"/>
+    <properties
+        name="Label"
+        dataType="String"/>
     <interactionPositions
         name="Circle Angle Top Right"
         element="Angle"
@@ -568,6 +574,9 @@
     <properties
         name="Line IsOriented"
         dataType="Boolean"/>
+    <properties
+        name="Label"
+        dataType="String"/>
     <interactionPositions
         name="End Line"
         element="End"
@@ -629,6 +638,9 @@
     <properties
         name="Line IsOriented"
         dataType="Boolean"/>
+    <properties
+        name="Label"
+        dataType="String"/>
     <interactionPositions
         name="End Line"
         element="End"
@@ -652,6 +664,9 @@
     <properties
         name="Line IsOriented"
         dataType="Boolean"/>
+    <properties
+        name="Label"
+        dataType="String"/>
     <interactionPositions
         name="End Line"
         element="End"
@@ -675,6 +690,9 @@
     <properties
         name="Line IsOriented"
         dataType="Boolean"/>
+    <properties
+        name="Label"
+        dataType="String"/>
     <interactionPositions
         name="Start Line"
         element="Start"
@@ -700,6 +718,9 @@
     <properties
         name="Rectangle Height"
         dataType="Double"/>
+    <properties
+        name="Label"
+        dataType="String"/>
     <interactionPositions
         name="Rectangle Angle Top Right"
         element="Angle"
@@ -749,6 +770,9 @@
     <properties
         name="Rectangle Height"
         dataType="Double"/>
+    <properties
+        name="Label"
+        dataType="String"/>
     <interactionPositions
         name="Rectangle Angle Top Right"
         element="Angle"
@@ -798,6 +822,9 @@
     <properties
         name="Triangle Height"
         dataType="Double"/>
+    <properties
+        name="Label"
+        dataType="String"/>
     <interactionPositions
         name="Triangle Angle Top Right"
         element="Angle"
