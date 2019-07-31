@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/it.univaq.disim.mde.editor/src-gen" creationIcons="false"
+    editDirectory="/it.univaq.disim.mde.editor.edit/src-gen" editorDirectory="/it.univaq.disim.mde.editor.editor/src-gen"
+    modelPluginID="it.univaq.disim.mde.editor" modelName="Editor" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>editor.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Editor" basePackage="it.univaq.disim.mde" disposableProviderFactory="true"
+      ecorePackage="editor.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="editor.ecore#//PropertyTypes">
+      <genEnumLiterals ecoreEnumLiteral="editor.ecore#//PropertyTypes/Integer"/>
+      <genEnumLiterals ecoreEnumLiteral="editor.ecore#//PropertyTypes/Boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="editor.ecore#//PropertyTypes/Double"/>
+      <genEnumLiterals ecoreEnumLiteral="editor.ecore#//PropertyTypes/String"/>
+    </genEnums>
+    <genClasses ecoreClass="editor.ecore#//EditorSelector">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference editor.ecore#//EditorSelector/actions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference editor.ecore#//EditorSelector/events"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference editor.ecore#//EditorSelector/contexts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference editor.ecore#//EditorSelector/formulas"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference editor.ecore#//EditorSelector/editors"/>
+    </genClasses>
+    <genClasses ecoreClass="editor.ecore#//Event">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute editor.ecore#//Event/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference editor.ecore#//Event/eventPosition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference editor.ecore#//Event/context"/>
+    </genClasses>
+    <genClasses ecoreClass="editor.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute editor.ecore#//Action/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference editor.ecore#//Action/context"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference editor.ecore#//Action/event"/>
+    </genClasses>
+    <genClasses ecoreClass="editor.ecore#//Context">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference editor.ecore#//Context/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute editor.ecore#//Context/composed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute editor.ecore#//Context/numberOfElements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference editor.ecore#//Context/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference editor.ecore#//Context/interactionPositions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference editor.ecore#//Context/editors"/>
+    </genClasses>
+    <genClasses ecoreClass="editor.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute editor.ecore#//Property/dataType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute editor.ecore#//Property/isCalculated"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference editor.ecore#//Property/formula"/>
+    </genClasses>
+    <genClasses ecoreClass="editor.ecore#//InteractionPosition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute editor.ecore#//InteractionPosition/element"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute editor.ecore#//InteractionPosition/position"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="editor.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute editor.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="editor.ecore#//Formula">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute editor.ecore#//Formula/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference editor.ecore#//Formula/variables"/>
+    </genClasses>
+    <genClasses ecoreClass="editor.ecore#//Editor"/>
+  </genPackages>
+</genmodel:GenModel>
