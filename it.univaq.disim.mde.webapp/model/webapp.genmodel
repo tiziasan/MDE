@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/it.univaq.disim.mde.webapp/src-gen" creationIcons="false"
+    editDirectory="/it.univaq.disim.mde.webapp.edit/src-gen" editorDirectory="/it.univaq.disim.mde.webapp.editor/src-gen"
+    modelPluginID="it.univaq.disim.mde.webapp" modelName="Webapp" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>webapp.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Webapp" basePackage="it.univaq.disim.mde" disposableProviderFactory="true"
+      ecorePackage="webapp.ecore#/">
+    <genClasses ecoreClass="webapp.ecore#//Webpage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp.ecore#//Webpage/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp.ecore#//Webpage/homepage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference webapp.ecore#//Webpage/shownBy"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="webapp.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="webapp.ecore#//Entity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp.ecore#//Entity/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp.ecore#//Entity/isUnique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webapp.ecore#//Entity/text"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
