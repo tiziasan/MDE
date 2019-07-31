@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/it.univaq.disim.mde.match/src-gen" creationIcons="false"
+    editDirectory="/it.univaq.disim.mde.match.edit/src-gen" editorDirectory="/it.univaq.disim.mde.match.editor/src-gen"
+    modelPluginID="it.univaq.disim.mde.match" modelName="Match" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>match.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Match" basePackage="it.univaq.disim.mde" disposableProviderFactory="true"
+      ecorePackage="match.ecore#/">
+    <genClasses ecoreClass="match.ecore#//Root">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference match.ecore#//Root/matches"/>
+    </genClasses>
+    <genClasses ecoreClass="match.ecore#//Match">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference match.ecore#//Match/metaclass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference match.ecore#//Match/shapes"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Editor" ecorePackage="../../it.univaq.disim.mde.editor/model/editor.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../it.univaq.disim.mde.editor/model/editor.ecore#//PropertyTypes">
+      <genEnumLiterals ecoreEnumLiteral="../../it.univaq.disim.mde.editor/model/editor.ecore#//PropertyTypes/Integer"/>
+      <genEnumLiterals ecoreEnumLiteral="../../it.univaq.disim.mde.editor/model/editor.ecore#//PropertyTypes/Boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="../../it.univaq.disim.mde.editor/model/editor.ecore#//PropertyTypes/Double"/>
+      <genEnumLiterals ecoreEnumLiteral="../../it.univaq.disim.mde.editor/model/editor.ecore#//PropertyTypes/String"/>
+    </genEnums>
+    <genClasses ecoreClass="../../it.univaq.disim.mde.editor/model/editor.ecore#//EditorSelector">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../it.univaq.disim.mde.editor/model/editor.ecore#//EditorSelector/actions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../it.univaq.disim.mde.editor/model/editor.ecore#//EditorSelector/events"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../it.univaq.disim.mde.editor/model/editor.ecore#//EditorSelector/contexts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../it.univaq.disim.mde.editor/model/editor.ecore#//EditorSelector/formulas"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../it.univaq.disim.mde.editor/model/editor.ecore#//EditorSelector/editors"/>
+    </genClasses>
+    <genClasses ecoreClass="../../it.univaq.disim.mde.editor/model/editor.ecore#//Event">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../it.univaq.disim.mde.editor/model/editor.ecore#//Event/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../it.univaq.disim.mde.editor/model/editor.ecore#//Event/eventPosition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../it.univaq.disim.mde.editor/model/editor.ecore#//Event/context"/>
+    </genClasses>
+    <genClasses ecoreClass="../../it.univaq.disim.mde.editor/model/editor.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../it.univaq.disim.mde.editor/model/editor.ecore#//Action/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../it.univaq.disim.mde.editor/model/editor.ecore#//Action/context"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../it.univaq.disim.mde.editor/model/editor.ecore#//Action/event"/>
+    </genClasses>
+    <genClasses ecoreClass="../../it.univaq.disim.mde.editor/model/editor.ecore#//Context">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../it.univaq.disim.mde.editor/model/editor.ecore#//Context/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../it.univaq.disim.mde.editor/model/editor.ecore#//Context/composed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../it.univaq.disim.mde.editor/model/editor.ecore#//Context/numberOfElements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../it.univaq.disim.mde.editor/model/editor.ecore#//Context/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../it.univaq.disim.mde.editor/model/editor.ecore#//Context/interactionPositions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../it.univaq.disim.mde.editor/model/editor.ecore#//Context/editors"/>
+    </genClasses>
+    <genClasses ecoreClass="../../it.univaq.disim.mde.editor/model/editor.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../it.univaq.disim.mde.editor/model/editor.ecore#//Property/dataType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../it.univaq.disim.mde.editor/model/editor.ecore#//Property/isCalculated"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../it.univaq.disim.mde.editor/model/editor.ecore#//Property/formula"/>
+    </genClasses>
+    <genClasses ecoreClass="../../it.univaq.disim.mde.editor/model/editor.ecore#//InteractionPosition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../it.univaq.disim.mde.editor/model/editor.ecore#//InteractionPosition/element"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../it.univaq.disim.mde.editor/model/editor.ecore#//InteractionPosition/position"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../it.univaq.disim.mde.editor/model/editor.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../it.univaq.disim.mde.editor/model/editor.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="../../it.univaq.disim.mde.editor/model/editor.ecore#//Formula">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../it.univaq.disim.mde.editor/model/editor.ecore#//Formula/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../it.univaq.disim.mde.editor/model/editor.ecore#//Formula/variables"/>
+    </genClasses>
+    <genClasses ecoreClass="../../it.univaq.disim.mde.editor/model/editor.ecore#//Editor"/>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ASCII"?>
+<match:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:match="http://www.univaq.it/match">
+  <matches>
+    <metaclass href="http://www.univaq.it/family#//Members"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.0"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.1"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.2"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.5"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.6"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.7"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.8"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.9"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.10"/>
+  </matches>
+  <matches>
+    <metaclass href="http://www.univaq.it/webapp#//Webpage"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.0"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.1"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.2"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.5"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.6"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.7"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.8"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.9"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.10"/>
+  </matches>
+  <matches>
+    <metaclass href="http://www.univaq.it/family#//Person"/>
+  </matches>
+  <matches>
+    <metaclass href="http://www.univaq.it/family#//Family"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.2"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.5"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.6"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.7"/>
+  </matches>
+  <matches>
+    <metaclass href="http://www.univaq.it/webapp#//Entity"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.2"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.5"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.6"/>
+    <shapes href="Model/EditorSelector.xmi#//@contexts.7"/>
+  </matches>
+</match:Root>

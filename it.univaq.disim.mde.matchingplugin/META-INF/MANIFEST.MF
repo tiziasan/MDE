@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Matchingplugin
+Bundle-SymbolicName: it.univaq.disim.mde.matchingplugin
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: it.univaq.disim.mde.matchingplugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.emf.ecore;bundle-version="2.18.0",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.16.0",
+ it.univaq.disim.mde.editor;bundle-version="0.1.0",
+ it.univaq.disim.mde.family;bundle-version="0.1.0",
+ it.univaq.disim.mde.match;bundle-version="0.1.0",
+ it.univaq.disim.mde.webapp;bundle-version="0.1.0"
