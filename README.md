@@ -1,7 +1,7 @@
 # Model Driven Engineering Project
 
 # Description
-This repository contains four metamodels and two models, the metamodels are:
+This repository contains four metamodels and two models, the metamodels are:/n
 -Family, that describes the structure of a family.
 -Webapp, the describes the structure of a simply web application.
 -Editor, that describes the structure of a 'drawing program'.
@@ -14,4 +14,4 @@ Then we create a new model based on Match metamodel where foreach match we have 
 
 # How to run
 To run the project just clone the repository and run the Main in the folder it.univaq.disim.mde.matchingplugin/src/it/univaq/disim/mde/matchingplugin as java application.  
-<
+
