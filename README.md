@@ -14,3 +14,4 @@ Then we create a new model based on Match metamodel where foreach match we have 
 
 # How to run
 To run the project just clone the repository and run the Main in the folder it.univaq.disim.mde.matchingplugin/src/it/univaq/disim/mde/matchingplugin as java application.  
+<
